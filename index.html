@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#050508">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIPITO — 100% Cold-Pressed Indian Superfruit Nectar</title>
+<meta name="description" content="SIPITO: Pure cold-pressed Indian superfruit nectar. Ratnagiri Alphonso, Nagpur Orange, Pink Guava & Chilli, Bhagwa Pomegranate. No added sugar. No heat. Never cooked.">
+<meta property="og:title" content="SIPITO — Nature's Raw Pulse. Sealed Pure."><meta property="og:description" content="Real Indian heritage fruits, cold-pressed and canned at source.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f2a81d'/%3E%3Ctext x='32' y='47' font-size='40' text-anchor='middle' font-family='Impact,sans-serif' fill='%23050508'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+@property --glow-angle{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --c:#f2a81d;
+  --bg:#050508;
+  --bg-dark:#08070d;
+  --fg:#f6f2ec;
+  --mu:#9e9790;
+  --card-bg:rgba(15,12,20,0.74);
+  --card-border:rgba(255,255,255,0.11);
+  --cx:74%;
+  color-scheme:dark;
+  box-sizing:border-box;
+}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden;background-color:#050508}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;margin:0;line-height:.94}
+:focus-visible{outline:2px solid var(--c);outline-offset:3px;border-radius:10px}
+
+/* Interactive Cursor Spotlight Glow */
+#spotlight{
+  position:fixed;
+  width:650px;
+  height:650px;
+  pointer-events:none;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle, color-mix(in srgb,var(--c) 28%,transparent) 0%, color-mix(in srgb,var(--c) 8%,transparent) 40%, transparent 70%);
+  mix-blend-mode:screen;
+  filter:blur(36px);
+  z-index:1;
+  opacity:.85;
+  transition:background .4s;
+}
+
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.beams{position:fixed;inset:0;z-index:0;pointer-events:none;background:conic-gradient(from var(--a) at var(--cx) 48%,transparent 0 6%,color-mix(in srgb,var(--c) 26%,transparent) 8%,transparent 12% 34%,rgba(255,255,255,.07) 36%,transparent 40% 62%,color-mix(in srgb,var(--c) 20%,transparent) 64%,transparent 69% 86%,rgba(255,255,255,.05) 88%,transparent 92%);-webkit-mask:radial-gradient(circle at var(--cx) 48%,#000,transparent 74%);mask:radial-gradient(circle at var(--cx) 48%,#000,transparent 74%);animation:rot 36s linear infinite}
+@keyframes rot{to{--a:360deg}}
+
+.glow,.flash{position:fixed;left:var(--cx);top:48%;z-index:0;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%)}
+.glow{width:88vmin;height:88vmin;background:radial-gradient(circle,color-mix(in srgb,var(--c) 55%,transparent),color-mix(in srgb,var(--c) 14%,transparent) 48%,transparent 72%);filter:blur(32px);animation:br 4.5s ease-in-out infinite alternate}
+@keyframes br{from{opacity:.55;scale:.92}to{opacity:1;scale:1.1}}
+.flash{width:120vmin;height:120vmin;background:radial-gradient(circle,#fff,var(--c) 25%,transparent 62%);opacity:0;z-index:1}
+.flash.on{animation:fl 1.1s ease-out}
+@keyframes fl{0%{opacity:0;scale:.3}15%{opacity:.85}100%{opacity:0;scale:1.1}}
+.vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(5,5,8,.75),rgba(5,5,8,.4) 38%,transparent 66%),radial-gradient(ellipse at 50% 50%,transparent 42%,rgba(2,2,4,.82))}
+
+/* Navigation */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5vw}
+.bar{display:flex;align-items:center;gap:1.6rem;padding:.4rem .55rem .4rem 1.6rem;border-radius:99px;background:rgba(14,11,18,.76);border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 10px 40px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.15);position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);transform:translateX(-100%);animation:barSheen 8s infinite}
+@keyframes barSheen{20%,100%{transform:translateX(100%)}}
+
+.logo-wrap{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none}
+.logo-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#fff4b8 0%,#ffd700 30%,#d4af37 65%,#996515 100%);display:flex;align-items:center;justify-content:center;color:#0b0908;font:900 1.45rem/1 Anton,sans-serif;box-shadow:0 0 22px rgba(255,215,0,.65),0 0 35px rgba(212,175,55,.35),inset 0 1px 2px rgba(255,255,255,.9);transform:rotate(-4deg);transition:all .35s cubic-bezier(.2,1.2,.4,1);border:1px solid rgba(255,240,160,.7);text-shadow:0 1px 0 rgba(255,255,255,.35)}
+.logo-wrap:hover .logo-badge{transform:rotate(0) scale(1.12);box-shadow:0 0 32px rgba(255,215,0,.9),0 0 50px rgba(212,175,55,.5),inset 0 1px 3px rgba(255,255,255,1)}
+.logo{font:400 2rem/1 Anton,sans-serif;letter-spacing:.08em;background:linear-gradient(180deg,#ffffff 20%,#e2dacf 90%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+
+.bar a:not(.logo-wrap){
+  color:var(--fg);
+  text-decoration:none;
+  font-weight:600;
+  font-size:.92rem;
+  transition:all .28s cubic-bezier(.2,1,.3,1);
+  position:relative;
+  padding:.45rem 1.1rem;
+  border-radius:99px;
+  border:1px solid transparent;
+  display:inline-flex;
+  align-items:center;
+}
+.bar a:not(.logo-wrap):hover{
+  color:#fff;
+  background:rgba(255,255,255,.1);
+  border-color:rgba(255,255,255,.2);
+  box-shadow:0 0 20px -2px color-mix(in srgb,var(--c) 55%,transparent);
+  transform:translateY(-2px) scale(1.05);
+  text-shadow:0 0 14px color-mix(in srgb,var(--c) 80%,transparent);
+}
+.bar a.act{
+  color:var(--c);
+  background:rgba(255,255,255,.07);
+  border-color:color-mix(in srgb,var(--c) 45%,transparent);
+  box-shadow:0 0 16px -2px color-mix(in srgb,var(--c) 35%,transparent);
+}
+.bar a.act:after{
+  content:"";
+  position:absolute;
+  bottom:3px;
+  left:20%;
+  right:20%;
+  height:2.5px;
+  background:var(--c);
+  border-radius:2px;
+  box-shadow:0 0 10px var(--c);
+}
+
+.cart{
+  display:inline-flex;
+  align-items:center;
+  gap:.65rem;
+  min-height:46px;
+  padding:0 1.45rem;
+  border-radius:99px;
+  background:linear-gradient(135deg,var(--c) 0%,color-mix(in srgb,var(--c) 75%,#000) 100%);
+  color:#07060a!important;
+  font-weight:700!important;
+  border:1px solid rgba(255,255,255,.35);
+  cursor:pointer;
+  transition:transform .25s cubic-bezier(.2,1.2,.4,1),box-shadow .35s,background .4s;
+  box-shadow:0 0 26px color-mix(in srgb,var(--c) 65%,transparent);
+  position:relative;
+  overflow:hidden;
+}
+.cart:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:translateX(-100%);
+  transition:transform .6s;
+}
+.cart:hover:before{
+  transform:translateX(100%);
+}
+.cart:hover{
+  transform:translateY(-3px) scale(1.06);
+  box-shadow:0 0 45px color-mix(in srgb,var(--c) 90%,transparent);
+}
+.cart.bump{animation:bp .45s cubic-bezier(.2,1.5,.4,1)}@keyframes bp{40%{transform:scale(1.22) rotate(-3deg)}70%{transform:scale(0.95)}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:54px;padding:0 2.2rem;border:0;border-radius:99px;background:var(--c);color:#07060a;font:700 .92rem "Space Grotesk",sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 0 36px color-mix(in srgb,var(--c) 60%,transparent);transition:transform .2s,box-shadow .3s;position:relative;overflow:hidden}
+.btn:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transition:left .6s}
+.btn:hover:before{left:100%}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 60px color-mix(in srgb,var(--c) 85%,transparent)}
+.btn.g{background:rgba(255,255,255,.06);color:var(--fg);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.28);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn.g:hover{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6),0 0 34px rgba(255,255,255,.25)}
+
+/* Hero Section */
+.hero{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:7.5rem 6vw 4rem;max-width:54vw}
+.hero-badges{display:inline-flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;opacity:0}
+.go .hero-badges{animation:fi .8s .3s forwards}
+.eb{display:inline-flex;align-items:center;gap:.65rem;font-weight:700;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;color:var(--c);background:rgba(255,255,255,.06);padding:.48rem 1.2rem;border-radius:99px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(12px);margin-bottom:0;box-shadow:0 4px 22px rgba(0,0,0,.4)}
+.eb i{width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c);animation:pulseDot 2s infinite}
+
+/* Unique Eye-Catching Holographic Creator Badge */
+.hero-creator{
+  display:inline-flex;
+  align-items:center;
+  gap:.65rem;
+  padding:.48rem 1.25rem .48rem .95rem;
+  border-radius:99px;
+  background:linear-gradient(135deg,rgba(26,18,34,.9) 0%,rgba(14,10,22,.96) 100%);
+  color:#fff;
+  text-decoration:none;
+  font-size:.84rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  backdrop-filter:blur(16px);
+  position:relative;
+  z-index:1;
+  box-shadow:0 0 28px -2px rgba(220,39,67,.5),0 8px 24px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.25);
+  transition:all .35s cubic-bezier(.2,1.2,.3,1);
+  animation:floatCreator 3.8s ease-in-out infinite alternate;
+}
+.hero-creator:before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:99px;
+  background:linear-gradient(90deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888,#f09433);
+  background-size:300% 100%;
+  z-index:-1;
+  animation:borderGlow 4.5s linear infinite;
+}
+@keyframes borderGlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes floatCreator{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-4px)}
+}
+.hero-creator:hover{
+  transform:translateY(-5px) scale(1.07);
+  box-shadow:0 0 38px 3px rgba(220,39,67,.75),0 12px 30px rgba(0,0,0,.85);
+}
+.hc-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#10b981;
+  box-shadow:0 0 12px #10b981;
+  animation:livePulse 1.8s infinite;
+}
+@keyframes livePulse{
+  0%,100%{opacity:1;scale:1}
+  50%{opacity:.45;scale:.75}
+}
+.hc-text{
+  font-family:'Space Grotesk',sans-serif;
+  color:rgba(255,255,255,.94);
+  font-size:.84rem;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+}
+.hc-name{
+  background:linear-gradient(90deg,#ff758c,#ff7eb3,#ffb199,#ffd166);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  font-weight:800;
+  letter-spacing:.04em;
+  animation:textShimmer 3s linear infinite;
+}
+@keyframes textShimmer{
+  to{background-position:200% center}
+}
+.hc-ig{
+  width:17px;
+  height:17px;
+  fill:#fff;
+  filter:drop-shadow(0 0 6px rgba(220,39,67,.8));
+  transition:transform .3s cubic-bezier(.2,1.2,.3,1);
+}
+.hero-creator:hover .hc-ig{
+  transform:rotate(18deg) scale(1.22);
+}
+@keyframes pulseDot{0%,100%{opacity:1;scale:1}50%{opacity:.5;scale:.8}}
+.go .eb{animation:fi .8s .3s forwards}
+@keyframes fi{to{opacity:1}}
+
+h1{font-size:clamp(3.4rem,7.8vw,8.2rem);filter:drop-shadow(0 10px 34px rgba(0,0,0,.7));letter-spacing:.02em}
+.ln{display:block}
+.l{display:inline-block;opacity:0;transform:translateY(70px) scale(.2) rotate(-8deg);filter:blur(14px);background:linear-gradient(180deg,#fff 5%,var(--c) 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sp{display:inline-block;width:.28em}
+.go .l{animation:pp .95s cubic-bezier(.2,1.5,.4,1) forwards;animation-delay:calc(var(--i)*55ms + 1.25s)}
+@keyframes pp{55%{opacity:1;transform:translateY(-14px) scale(1.14) rotate(2deg);filter:blur(0)}100%{opacity:1;transform:none;filter:blur(0)}}
+
+.sub{max-width:33rem;color:#ded8d0;font-size:1.15rem;margin:1.6rem 0 1.8rem;opacity:0;line-height:1.7;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.go .sub,.go .cta,.go .hero-metrics{animation:fi .9s 2.3s forwards}
+.cta{display:flex;gap:1.1rem;flex-wrap:wrap;opacity:0;margin-bottom:2.2rem}
+
+/* Hero Trust Metrics */
+.hero-metrics{display:flex;gap:1.6rem;flex-wrap:wrap;opacity:0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.09)}
+.hm-item{display:flex;flex-direction:column;gap:.2rem}
+.hm-val{font:700 1.35rem Anton,sans-serif;color:#fff;letter-spacing:.04em;display:flex;align-items:center;gap:.35rem}
+.hm-val span{color:var(--c)}
+.hm-lbl{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+
+/* Kinetic Scrolling Marquee Ticker */
+.marquee-wrap{position:relative;z-index:3;overflow:hidden;background:rgba(10,8,14,.8);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);padding:1rem 0;backdrop-filter:blur(12px)}
+.marquee{display:flex;gap:3rem;white-space:nowrap;animation:mq 35s linear infinite;width:max-content}
+.marquee span{font:400 1.3rem/1 Anton,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8);display:inline-flex;align-items:center;gap:1.5rem}
+.marquee span b{color:var(--c);font-weight:400}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Flavour Discovery Panel */
+.fl{position:relative;z-index:2;min-height:100svh;display:flex;align-items:center;padding:6rem 6vw}
+.panel{
+  width:min(40rem,100%);
+  padding:2.4rem;
+  border-radius:32px;
+  background:linear-gradient(135deg,rgba(18,14,24,.82) 0%,rgba(10,8,15,.9) 100%);
+  border:1px solid color-mix(in srgb,var(--c) 45%,rgba(255,255,255,.14));
+  box-shadow:0 0 80px -15px color-mix(in srgb,var(--c) 45%,transparent),0 20px 40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.18);
+  -webkit-backdrop-filter:blur(24px);
+  backdrop-filter:blur(24px);
+  transition:border-color .4s,box-shadow .4s,transform .25s ease-out;
+  transform-style:preserve-3d;
+}
+.panel:hover{
+  border-color:color-mix(in srgb,var(--c) 70%,rgba(255,255,255,.3));
+  box-shadow:0 0 100px -10px color-mix(in srgb,var(--c) 60%,transparent),0 30px 60px rgba(0,0,0,.8);
+}
+.lab-wrap{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.1rem}
+.lab{font-weight:700;font-size:.76rem;letter-spacing:.26em;text-transform:uppercase;color:var(--c)}
+.terroir-tag{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .75rem;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);font-size:.78rem;color:#f0ece6;font-weight:500}
+
+.chips{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.sw{display:inline-flex;align-items:center;gap:.6rem;min-height:46px;padding:0 1.2rem 0 .9rem;border-radius:99px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:var(--fg);font:500 .86rem "Space Grotesk",sans-serif;cursor:pointer;transition:all .3s}
+.sw:hover{border-color:var(--k);background:rgba(255,255,255,.08);box-shadow:0 0 16px -4px var(--k)}
+.sw i{width:14px;height:14px;border-radius:50%;background:var(--k);box-shadow:0 0 14px var(--k)}
+.sw[aria-pressed=true]{background:color-mix(in srgb,var(--k) 28%,transparent);border-color:var(--k);box-shadow:0 0 26px -2px var(--k);font-weight:700}
+
+h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+#fn{color:var(--c);text-shadow:0 0 44px color-mix(in srgb,var(--c) 65%,transparent);transition:color .3s}
+.panel p{color:#d8d1c9;margin:1rem 0 1.3rem;font-size:1.05rem;line-height:1.65}
+
+/* Taste Radar Metrics */
+.taste-radar{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.4rem;padding:1.1rem;margin:1.4rem 0;background:rgba(0,0,0,.35);border-radius:18px;border:1px solid rgba(255,255,255,.07)}
+.tr-item{display:flex;flex-direction:column;gap:.35rem}
+.tr-head{display:flex;justify-content:space-between;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--mu)}
+.tr-bar-bg{height:6px;border-radius:6px;background:rgba(255,255,255,.1);overflow:hidden;position:relative}
+.tr-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 60%,#fff),var(--c));box-shadow:0 0 10px var(--c);width:80%;transition:width .6s cubic-bezier(.2,.9,.2,1)}
+
+ul.t{list-style:none;display:flex;gap:.55rem;flex-wrap:wrap;padding:0;margin:0 0 1.8rem}
+ul.t li{padding:.35rem 1rem;border-radius:99px;font-size:.84rem;font-weight:500;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:#f2ece4}
+
+.buy{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;padding-top:.5rem}
+.price{font:400 3.6rem/1 Anton,sans-serif;color:#fff;letter-spacing:.02em}
+.pop>*{animation:pu .6s cubic-bezier(.2,.9,.2,1) both}@keyframes pu{from{opacity:0;transform:translateY(16px)}}
+
+/* Why SIPITO — Luxury 4-Tile Grid */
+.why{position:relative;z-index:2;padding:6.5rem 6vw 5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.why-card{
+  padding:2.2rem;
+  border-radius:28px;
+  background:linear-gradient(135deg,rgba(16,13,22,.8) 0%,rgba(9,7,13,.88) 100%);
+  border:1px solid rgba(255,255,255,.12);
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
+  box-shadow:0 14px 45px rgba(0,0,0,.5);
+  transition:transform .3s,border-color .3s,box-shadow .3s;
+  position:relative;
+  overflow:hidden;
+}
+.why-card:hover{
+  transform:translateY(-6px);
+  border-color:color-mix(in srgb,var(--c) 50%,rgba(255,255,255,.3));
+  box-shadow:0 22px 60px rgba(0,0,0,.7),0 0 35px -10px color-mix(in srgb,var(--c) 50%,transparent);
+}
+.why-card svg{width:46px;height:46px;color:var(--c);margin-bottom:1.2rem;display:block;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--c) 65%,transparent))}
+.why-card h3{font-size:2.1rem;color:#fff;margin-bottom:.6rem;letter-spacing:.04em}
+.why-card p{margin:0 0 1.2rem;color:var(--mu);font-size:1rem;line-height:1.65}
+.why-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.2rem .75rem;border-radius:99px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+
+/* Comparison Section */
+.comp-sec{position:relative;z-index:2;padding:4rem 6vw 6rem}
+.comp-card{
+  padding:3rem;
+  border-radius:32px;
+  background:linear-gradient(135deg,rgba(15,12,20,.85) 0%,rgba(8,7,12,.92) 100%);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(24px);
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+  max-width:68rem;
+  margin:0 auto;
+}
+.comp-header{text-align:center;margin-bottom:2.6rem}
+.comp-header h2{font-size:clamp(2.4rem,4.5vw,3.6rem);color:#fff;margin-bottom:.6rem}
+.comp-header p{color:var(--mu);font-size:1.1rem;max-width:32rem;margin:0 auto}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.comp-col{padding:2rem;border-radius:22px}
+.comp-col.sipito{background:rgba(242,168,29,.07);border:1px solid color-mix(in srgb,var(--c) 40%,rgba(255,255,255,.15));box-shadow:0 0 40px -10px color-mix(in srgb,var(--c) 30%,transparent)}
+.comp-col.others{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07)}
+.comp-col h4{font:700 1.4rem Anton,sans-serif;letter-spacing:.06em;margin:0 0 1.4rem;display:flex;align-items:center;gap:.6rem}
+.comp-col.sipito h4{color:var(--c)}
+.comp-col.others h4{color:#8c8680}
+.comp-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.1rem}
+.comp-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.96rem;line-height:1.5}
+.comp-list li i{flex:none;margin-top:.15rem;font-style:normal;font-weight:700}
+.comp-col.sipito li i{color:var(--c)}
+.comp-col.others li i{color:#6e6862}
+
+/* Footer */
+footer{position:relative;z-index:2;text-align:center;padding:3.5rem 5vw 4.5rem;color:var(--mu);font-size:.92rem}
+.ft{display:grid;gap:2rem;justify-items:center;border-top:1px solid rgba(255,255,255,.1);margin:0 5vw;padding:4rem 0 4.5rem!important}
+.ft p{margin:.4rem 0 0;color:var(--fg);font-size:1.05rem}
+/* Top Creator Nav Pill */
+.top-creator{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding:.3rem .8rem .3rem .65rem;
+  border-radius:99px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);
+  color:#fff;
+  text-decoration:none;
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  transition:all .3s cubic-bezier(.2,1,.3,1);
+  position:relative;
+  overflow:hidden;
+  white-space:nowrap;
+  box-shadow:0 0 12px rgba(255,255,255,.04);
+}
+.top-creator:hover{
+  background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  border-color:transparent;
+  box-shadow:0 0 22px rgba(220,39,67,.6);
+  transform:translateY(-1px) scale(1.04);
+  color:#fff;
+}
+.tc-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--c);
+  box-shadow:0 0 8px var(--c);
+  animation:pulseDot 2s infinite;
+}
+.tc-text{
+  font-family:'Space Grotesk',sans-serif;
+  color:rgba(255,255,255,.88);
+  font-size:.78rem;
+}
+.tc-text b{
+  color:#fff;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+.tc-text-mob{
+  font-family:'Space Grotesk',sans-serif;
+  color:#fff;
+  font-weight:700;
+  font-size:.76rem;
+}
+.tc-ig{
+  width:14px;
+  height:14px;
+  fill:currentColor;
+  transition:transform .25s;
+}
+.top-creator:hover .tc-ig{
+  transform:rotate(15deg) scale(1.18);
+}
+
+.creator-wrap{display:flex;align-items:center;justify-content:center;gap:.85rem;margin-top:.4rem;flex-wrap:wrap}
+.creator-badge{font-size:.95rem;color:var(--mu);display:inline-flex;align-items:center;gap:.45rem}
+.creator-badge b{color:#fff;font-weight:700}
+.ig-link{display:inline-flex;align-items:center;gap:.5rem;padding:.38rem 1rem;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:.88rem;font-weight:600;transition:all .25s cubic-bezier(.2,1,.3,1)}
+.ig-link:hover{background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);border-color:transparent;box-shadow:0 0 24px rgba(220,39,67,.55);transform:translateY(-2px);color:#fff}
+.ig-link svg{width:16px;height:16px;fill:currentColor}
+
+@media(min-width:769px){
+  .tc-text-mob{display:none}
+}
+
+@media(max-width:960px){
+  .bar a:not(.logo-wrap):not(.top-creator):not([href="#journey"]):not([href="#flavours"]){display:none}
+}
+
+@media(max-width:768px){
+  :root{--cx:50%}
+  nav{padding:.75rem 4vw}
+  .bar{gap:.6rem;padding:.35rem .45rem .35rem .75rem}
+  .bar a:not(.logo-wrap):not(.top-creator):not([href="#journey"]){display:none}
+  .logo-badge{width:32px;height:32px;font-size:1.2rem;border-radius:9px}
+  .logo{font-size:1.6rem}
+  .top-creator{padding:.25rem .65rem;gap:.35rem}
+  .tc-text{display:none}
+  .tc-text-mob{display:inline-block}
+  .cart{min-height:40px;padding:0 1rem;font-size:.84rem}
+  .glow,.flash{top:30%}.beams{background-position:center}
+  .hero{max-width:none;padding:7.5rem 5vw 2.5rem;text-align:left}
+  h1{font-size:clamp(2.6rem,11.5vw,4.5rem);line-height:.96}
+  .sub{font-size:1.02rem;margin:1.2rem 0 1.5rem;line-height:1.6}
+  .cta{gap:.8rem}
+  .btn{min-height:50px;padding:0 1.6rem;font-size:.86rem}
+  .hero-metrics{gap:.9rem 1.4rem}
+  .hm-val{font-size:1.15rem}
+  .fl{align-items:flex-end;padding:4.5rem 4vw 2rem}
+  .panel{padding:1.4rem;border-radius:24px;width:100%}
+  .price{font-size:2.8rem}
+  .taste-radar{grid-template-columns:1fr;gap:.7rem}
+  .why{padding:4rem 5vw 3rem;grid-template-columns:1fr;gap:1.2rem}
+  .comp-sec{padding:2.5rem 4vw 3.5rem}
+  .comp-card{padding:1.5rem;border-radius:22px}
+  .comp-grid{grid-template-columns:1fr;gap:1.2rem}
+  .ft{padding:3rem 0 3.5rem!important;gap:1.5rem}
+  .ft .fnav{gap:1.2rem;font-size:.92rem}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .l,.eb,.sub,.cta,.hero-metrics{opacity:1!important;transform:none!important;filter:none!important;animation:none!important}
+  .beams,.glow,.marquee{animation:none}
+  #spotlight{display:none}
+}
+
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:#050508}
+.l{background:none;color:#fff;-webkit-text-fill-color:#fff}
+.streak{position:fixed;left:0;right:0;top:48%;height:3px;z-index:1;pointer-events:none;opacity:0;background:linear-gradient(90deg,transparent,#fff,transparent);box-shadow:0 0 30px 6px rgba(255,255,255,.6)}
+.streak.on{animation:sk 1.3s ease-out}@keyframes sk{0%{opacity:0;transform:scaleX(0)}15%{opacity:1}100%{opacity:0;transform:scaleX(1.3)}}
+.blk{position:fixed;inset:0;background:#000;z-index:19;pointer-events:none;animation:blk 1.2s .1s forwards}@keyframes blk{to{opacity:0;visibility:hidden}}
+.bars:before,.bars:after{content:"";position:fixed;left:0;right:0;height:10vh;background:#000;z-index:20;pointer-events:none;animation:bar .9s 2.8s cubic-bezier(.6,0,.2,1) forwards}.bars:before{top:0}.bars:after{bottom:0}@keyframes bar{to{height:0}}
+.grain{position:fixed;inset:-50%;z-index:15;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");animation:gr .8s steps(6) infinite}
+@keyframes gr{20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}}
+
+#jr{position:fixed;inset:0;z-index:30;background:#000;display:none}#jr.on{display:block}#jc{position:absolute;inset:0;width:100%;height:100%}
+#jr .grain{z-index:3}.jbars:before,.jbars:after{content:"";position:absolute;left:0;right:0;height:9vh;background:#000;z-index:4}.jbars:before{top:0}.jbars:after{bottom:0}
+#jfade{position:absolute;inset:0;background:#000;z-index:5;pointer-events:none;opacity:1}
+.jbr{position:absolute;z-index:8;left:6vw;top:calc(env(safe-area-inset-top,0px) + 11vh);font:400 2rem/1 Anton,sans-serif;letter-spacing:.08em;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.6)}.jbr small{display:block;font:700 .72rem "Space Grotesk",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--c);margin-top:.4rem}
+#jx{position:absolute;z-index:8;top:calc(env(safe-area-inset-top,0px) + 11vh);right:5vw;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.5);color:#fff;font-size:1.1rem;cursor:pointer;transition:transform .2s,background .2s}
+#jx:hover{transform:scale(1.1);background:rgba(255,255,255,.15)}
+.jcap{position:absolute;z-index:6;left:6vw;bottom:calc(env(safe-area-inset-bottom,0px) + 17vh);max-width:min(34rem,88vw);color:#fff;text-shadow:0 3px 28px rgba(0,0,0,.7)}
+.jcap span{font:400 clamp(3.2rem,9vw,6.4rem)/1 Anton,sans-serif;color:var(--c);display:block}.jcap h2{font-size:clamp(1.9rem,4.5vw,3.4rem);margin:.3rem 0 .6rem}.jcap p{margin:0;color:#f0e9e2;font-size:1.1rem;line-height:1.6}
+.jcap.pp>*{animation:pu .9s cubic-bezier(.2,.9,.2,1) both}.jcap.pp>*:nth-child(2){animation-delay:.1s}.jcap.pp>*:nth-child(3){animation-delay:.2s}
+.jctl{position:absolute;z-index:8;left:6vw;right:6vw;bottom:calc(env(safe-area-inset-bottom,0px) + 11vh);display:flex;align-items:center;gap:1.2rem;transform:translateY(100%)}
+#jp{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.5);color:#fff;cursor:pointer;flex:none;font-size:1rem;transition:transform .2s}
+#jp:hover{transform:scale(1.08)}
+#jdots{display:flex;gap:.6rem;flex:1}#jdots button{flex:1;height:24px;border:0;background:none;cursor:pointer;padding:0;position:relative}#jdots button:before{content:"";position:absolute;left:0;right:0;top:10px;height:4px;border-radius:4px;background:rgba(255,255,255,.28)}#jdots i{position:absolute;left:0;top:10px;height:4px;border-radius:4px;background:var(--c);width:0}
+#jc{filter:contrast(1.06) saturate(1.12)}
+#jsun{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.2s;mix-blend-mode:screen;background:radial-gradient(circle at 20% 24%,rgba(255,240,200,.55),rgba(255,200,120,.2) 20%,transparent 48%)}
+.jtick{position:absolute;left:0;right:0;top:0;height:9vh;z-index:6;overflow:hidden;display:flex;align-items:center;pointer-events:none}
+.jtick span{flex:none;white-space:nowrap;font:400 clamp(1rem,2.6vh,1.5rem) Anton,Impact,sans-serif;letter-spacing:.22em;color:#fff;animation:tk 40s linear infinite}
+.jtick b{color:var(--c);margin:0 1.4rem;font-weight:400}.jtick i{font-style:normal;color:var(--c)}
+@keyframes tk{to{transform:translateX(-50%)}}
+.skip{position:fixed;left:1rem;top:-4rem;z-index:50;padding:.7rem 1.2rem;border-radius:12px;background:var(--c);color:#0b0908;font-weight:700;text-decoration:none}.skip:focus{top:1rem}
+
+#dscrim{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .3s;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.dopen #dscrim{opacity:1;pointer-events:auto}.dopen{overflow:hidden}
+#drawer{position:fixed;top:0;right:0;bottom:0;z-index:41;width:min(27rem,100%);display:flex;flex-direction:column;background:#131016;border-left:1px solid rgba(255,255,255,.12);box-shadow:-30px 0 80px rgba(0,0,0,.6);transform:translateX(105%);transition:transform .4s cubic-bezier(.2,.9,.2,1);padding-bottom:env(safe-area-inset-bottom,0px)}
+#drawer.on{transform:none}
+#drawer header{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 1.6rem;border-bottom:1px solid rgba(255,255,255,.08)}
+#drawer h2{font-size:1.9rem}
+#dx{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--fg);cursor:pointer;font-size:1.1rem}
+#dl{list-style:none;margin:0;padding:.8rem 1.6rem;flex:1;overflow:auto}
+#dl li{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+#dl li>i{width:16px;height:16px;border-radius:50%;background:var(--k);box-shadow:0 0 16px var(--k);flex:none}
+#dl li>div:nth-child(2){flex:1;min-width:0}#dl b{display:block;font-size:1.05rem}#dl small{color:var(--mu)}
+#dl .empty{display:block;text-align:center;color:var(--mu);padding:3.5rem 0;border:0}
+.qty{display:inline-flex;align-items:center;gap:.3rem;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:.15rem}
+.qty button{width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:var(--fg);font-size:1.1rem;cursor:pointer}
+.qty span{min-width:1.6rem;text-align:center;font-weight:700}
+#drawer footer{padding:1.4rem 1.6rem;border-top:1px solid rgba(255,255,255,.08);display:grid;gap:1rem}
+.sum{display:flex;justify-content:space-between;align-items:baseline}.sum b{font:400 2.2rem Anton,sans-serif}
+#ck:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+#toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 1.6rem);z-index:60;transform:translate(-50%,2rem);opacity:0;pointer-events:none;padding:.9rem 1.5rem;border-radius:99px;background:#fff;color:#0b0908;font-weight:700;font-size:.95rem;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:all .35s;max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+.wd{display:inline-block;white-space:nowrap}
+</style></head><body><a class="skip" href="#flavours">Skip to flavours</a><noscript><p style="position:relative;z-index:50;padding:1rem;text-align:center">SIPITO needs JavaScript to show its flavours and 3D experience.</p></noscript>
+<div id="spotlight"></div>
+<canvas id="bg"></canvas><div class="beams"></div><div class="streak" id="sk"></div><div class="glow"></div><div class="flash" id="fx"></div><canvas id="gl" aria-hidden="true"></canvas><div class="vig"></div>
+<nav>
+  <div class="bar">
+    <a class="logo-wrap" href="#top"><div class="logo-badge">S</div><span class="logo">SIPITO</span></a>
+    <a href="#flavours">Flavours</a>
+    <a href="#journey">Journey</a>
+    <a href="#why">Why SIPITO</a>
+    <a href="#compare">Craft Difference</a>
+  </div>
+  <button class="cart" id="cart" type="button" aria-haspopup="dialog" aria-controls="drawer">Cart (<b id="cn">0</b>)</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-badges">
+    <div class="eb"><i></i> Live Harvest: Pressed Fresh Today</div>
+    <a class="hero-creator" href="https://www.instagram.com/litweb0/" target="_blank" rel="noopener noreferrer" aria-label="Created by litweb0 on Instagram">
+      <span class="hc-dot"></span>
+      <span class="hc-text">Created by <b>@litweb0</b></span>
+      <svg class="hc-ig" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+  </div>
+  <h1 id="h1"></h1>
+  <p class="sub">Direct from partner heritage orchards to your can in under 24 hours. Real Indian superfruits, cold-pressed with zero heat, zero concentrate, and zero added water.</p>
+  <div class="cta"><a class="btn" href="#flavours">Explore Flavours ↓</a><a class="btn g" href="#journey">▶ Watch the 3D Journey</a></div>
+  <div class="hero-metrics">
+    <div class="hm-item"><div class="hm-val"><span>⚡</span> &lt;24h</div><div class="hm-lbl">Farm to Can</div></div>
+    <div class="hm-item"><div class="hm-val"><span>❄️</span> -4°C</div><div class="hm-lbl">Cryo-Locked</div></div>
+    <div class="hm-item"><div class="hm-val"><span>🌿</span> 100%</div><div class="hm-lbl">Raw Heritage Puree</div></div>
+    <div class="hm-item"><div class="hm-val"><span>🚫</span> 0%</div><div class="hm-lbl">Added Sugar</div></div>
+  </div>
+</header>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee">
+    <span>★ 100% COLD-PRESSED <b>·</b> NEVER COOKED</span>
+    <span>★ RATNAGIRI ALPHONSO <b>·</b> ALLAHABAD PINK GUAVA</span>
+    <span>★ ZERO WATER ADDED <b>·</b> PURE HERITAGE NECTAR</span>
+    <span>★ HERMETIC BPA-FREE CAN <b>·</b> FRESH CUT</span>
+    <span>★ 100% COLD-PRESSED <b>·</b> NEVER COOKED</span>
+    <span>★ RATNAGIRI ALPHONSO <b>·</b> ALLAHABAD PINK GUAVA</span>
+    <span>★ ZERO WATER ADDED <b>·</b> PURE HERITAGE NECTAR</span>
+    <span>★ HERMETIC BPA-FREE CAN <b>·</b> FRESH CUT</span>
+  </div>
+</div>
+
+<section class="fl" id="flavours">
+  <div class="panel pop" id="pn" aria-live="polite">
+    <div class="lab-wrap">
+      <div class="lab">Choose your nectar</div>
+      <div class="terroir-tag" id="fterr">📍 Ratnagiri, Maharashtra</div>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Choose a flavour"></div>
+    <h2 id="fn"></h2>
+    <p id="fd"></p>
+    
+    <div class="taste-radar">
+      <div class="tr-item">
+        <div class="tr-head"><span>Sweetness</span><span id="tr-sw">95%</span></div>
+        <div class="tr-bar-bg"><div class="tr-bar" id="tb-sw" style="width:95%"></div></div>
+      </div>
+      <div class="tr-item">
+        <div class="tr-head"><span>Crisp Acid</span><span id="tr-ac">60%</span></div>
+        <div class="tr-bar-bg"><div class="tr-bar" id="tb-ac" style="width:60%"></div></div>
+      </div>
+      <div class="tr-item">
+        <div class="tr-head"><span>Pulp Body</span><span id="tr-bd">98%</span></div>
+        <div class="tr-bar-bg"><div class="tr-bar" id="tb-bd" style="width:98%"></div></div>
+      </div>
+      <div class="tr-item">
+        <div class="tr-head"><span>Chill Serve</span><span id="tr-ch">2°C</span></div>
+        <div class="tr-bar-bg"><div class="tr-bar" id="tb-ch" style="width:90%"></div></div>
+      </div>
+    </div>
+
+    <ul class="t" id="ft"></ul>
+    <div class="buy"><span class="price" id="fp"></span><button class="btn" id="add">Add to cart</button></div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-card rv">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.2 7l15.6 10M19.8 7 4.2 17M9 4l3 2 3-2M9 20l3-2 3 2"/></svg>
+    <h3>Zero Heat Press</h3>
+    <p>Cold-pressed under 4°C sanitary hydraulic ram so living fruit enzymes, aroma, and crisp raw nectar notes stay pristine.</p>
+    <div class="why-badge">Tempered @ 3.8°C</div>
+  </div>
+  <div class="why-card rv">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+    <h3>Indian Terroir</h3>
+    <p>Direct single-origin sourcing: Ratnagiri Alphonso, Nagpur Santra, Allahabad Pink Guava, and Solapur Bhagwa Pomegranate.</p>
+    <div class="why-badge">Origin Certified</div>
+  </div>
+  <div class="why-card rv">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v16a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2zM7 8h10M7 16h10M10 2h4"/></svg>
+    <h3>Hermetic Can</h3>
+    <p>Infinitely recyclable BPA-free aluminum canned in nitrogen atmosphere to lock in oxygen-free raw sunlight freshness.</p>
+    <div class="why-badge">0% UV Degradation</div>
+  </div>
+  <div class="why-card rv">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    <h3>Cryo Logistics</h3>
+    <p>Sealed inside our insulated reefer fleet within hours of pluck, dispatched direct under cold-chain to retain raw vitality.</p>
+    <div class="why-badge">Direct Orchard Dispatch</div>
+  </div>
+</section>
+
+<section class="comp-sec rv" id="compare">
+  <div class="comp-card">
+    <div class="comp-header">
+      <div class="lab" style="margin-bottom:.5rem">The Raw Benchmark</div>
+      <h2>SIPITO vs Ordinary Juices</h2>
+      <p>Why raw cold-press delivers unmatched cellular vitality and explosive pure fruit taste.</p>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-col sipito">
+        <h4><span>✨</span> SIPITO Cold-Pressed</h4>
+        <ul class="comp-list">
+          <li><i>✓</i> <b>100% Raw Indian Fruit:</b> Never boiled, pasteurized, or cooked.</li>
+          <li><i>✓</i> <b>Live Active Enzymes:</b> 100% natural vitamins and phytonutrients preserved.</li>
+          <li><i>✓</i> <b>Zero Additives:</b> No added white sugar, artificial colors, or water.</li>
+          <li><i>✓</i> <b>Lightproof Can:</b> Preserves flavor with zero plastic micro-leaching.</li>
+        </ul>
+      </div>
+      <div class="comp-col others">
+        <h4><span>⚠️</span> Supermarket Cartons</h4>
+        <ul class="comp-list">
+          <li><i>✕</i> <b>Boiled Concentrates:</b> Heated to 90°C, destroying delicate aromatics.</li>
+          <li><i>✕</i> <b>Dead Enzymes:</b> Thermal heat pasteurization kills natural vital enzymes.</li>
+          <li><i>✕</i> <b>Heavy Sweeteners:</b> High-fructose corn syrup and chemical stabilizers.</li>
+          <li><i>✕</i> <b>Plastic & Tetra:</b> Suffers UV oxidation and flavor degradation on shelves.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft rv">
+  <div>
+    <a class="logo-wrap" href="#top"><div class="logo-badge">S</div><span class="logo">SIPITO</span></a>
+    <p>Nature's Raw Pulse. Sealed Pure. Bottled at source.</p>
+  </div>
+  <div class="fnav" role="navigation" aria-label="Footer">
+    <a href="#flavours">Flavours</a>
+    <a href="#journey">3D Journey</a>
+    <a href="#why">Why SIPITO</a>
+    <a href="#compare">Craft Difference</a>
+    <a href="#top">Back to top ↑</a>
+  </div>
+  <div class="creator-wrap">
+    <div class="creator-badge">Created by <b>litweb0</b></div>
+    <a class="ig-link" href="https://www.instagram.com/litweb0/" target="_blank" rel="noopener noreferrer" aria-label="litweb0 on Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <span>@litweb0</span>
+    </a>
+  </div>
+  <small>© <span id="yr">2026</span> SIPITO Beverages Pvt Ltd. All rights reserved.</small>
+</footer>
+
+<section id="jr" role="dialog" aria-modal="true" aria-label="The SIPITO journey from orchard to can"><canvas id="jc"></canvas><div class="grain"></div><div class="jbars"></div><div id="jsun"></div><div class="jtick"><span id="jtk"></span></div><div class="jbr">SIPITO<small>The 3D Orchard-To-Can Journey</small></div><div id="jfade"></div>
+<button id="jx" aria-label="Close journey">✕</button>
+<div class="jcap" id="jcap"><span id="jn"></span><h2 id="jt"></h2><p id="jd"></p></div>
+<div class="jctl"><button id="jp" aria-label="Pause">❚❚</button><div id="jdots"></div></div></section>
+<div id="dscrim"></div><aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="dh" inert><header><h2 id="dh">Your cold-press cart</h2><button id="dx" type="button" aria-label="Close cart">✕</button></header><ul id="dl"></ul><footer><div class="sum"><span>Subtotal</span><b id="dt">₹0</b></div><button class="btn" id="ck" type="button">Checkout Now</button></footer></aside><div id="toast" role="status" aria-live="polite"></div>
+<div class="blk"></div><div class="bars"></div><div class="grain"></div>
+
+<script>
+/* Flowing ambient liquid light shader */
+(function(){const c=document.getElementById('bg'),gl=c.getContext('webgl',{antialias:false,alpha:false,powerPreference:'low-power'});if(!gl)return;
+const vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+const fs=['precision mediump float;uniform vec2 uR;uniform float uT,uCx;uniform vec3 uC;',
+'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}',
+'float fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<5;i++){s+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return s;}',
+'void main(){vec2 uv=gl_FragCoord.xy/uR;float as=uR.x/uR.y;vec2 q=vec2((uv.x-uCx)*as,uv.y-.5);float t=uT*.06;',
+'vec2 w=vec2(fbm(q*2.+t),fbm(q*2.+vec2(5.2,1.3)-t));float f=fbm(q*2.2+w*1.6+t*.45);',
+'float r=length(q);vec3 darkBase=vec3(0.02,0.02,0.032);vec3 deep=mix(darkBase,uC*.45,.35);vec3 mid=mix(darkBase,uC,.7);vec3 hi=mix(uC,vec3(1.),.55);',
+'vec3 col=mix(darkBase,deep,smoothstep(.1,.65,f+.3-r*.6));col=mix(col,mid,smoothstep(.35,.85,f)*.7*(1.-r*.7));',
+'float cs=pow(1.-abs(sin((f+w.x)*8.)),12.);col+=hi*cs*.18*(1.-r);',
+'col*=1.-.5*smoothstep(.2,1.2,r);gl_FragColor=vec4(col,1.);}'].join('\n');
+function sh(t,src){const o=gl.createShader(t);gl.shaderSource(o,src);gl.compileShader(o);return o}
+const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return;gl.useProgram(pr);
+const bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);const lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+const U=n=>gl.getUniformLocation(pr,n),uR=U('uR'),uT=U('uT'),uCx=U('uCx'),uC=U('uC'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function rs(){c.width=Math.max(2,innerWidth*.5|0);c.height=Math.max(2,innerHeight*.5|0);gl.viewport(0,0,c.width,c.height)}addEventListener('resize',rs);rs();
+(function f(now){requestAnimationFrame(f);if(document.hidden||scrollY>innerHeight*1.1)return;
+ const hx=(document.documentElement.style.getPropertyValue('--c')||'#f2a81d').trim(),v=parseInt(hx.slice(1),16)||0xf2a81d;
+ gl.uniform2f(uR,c.width,c.height);gl.uniform1f(uT,reduce?3:now/1000);gl.uniform1f(uCx,innerWidth<850?.5:.74);gl.uniform3f(uC,(v>>16)/255,(v>>8&255)/255,(v&255)/255);gl.drawArrays(gl.TRIANGLES,0,3)})(0);
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const F=[
+{n:'Alphonso Mango',c:'#f2a81d',p:99,d:'Sun-ripened Ratnagiri Alphonso, cold-pressed thick and golden with a touch of crushed green cardamom. Pure Indian summer in a chilled can.',t:['Ratnagiri Alphonso','Green Cardamom','Zero Added Sugar'],loc:'📍 Ratnagiri, Maharashtra',sw:'96%',ac:'52%',bd:'98%',ch:'2°C'},
+{n:'Pink Guava & Chilli',c:'#ee6b88',p:79,d:'Velvety Allahabad pink guava laced with a micro-pinch of fiery green chilli and black rock salt, just like legendary Indian fruit stalls.',t:['Allahabad Pink Guava','Green Chilli','Himalayan Black Salt'],loc:'📍 Allahabad, Uttar Pradesh',sw:'78%',ac:'84%',bd:'92%',ch:'3°C'},
+{n:'Nagpur Orange',c:'#f28c1b',p:79,d:'Bursting with sweet and tangy Nagpur santra juice, cold-pressed with fragrant orange peel zest for an electric citrus punch.',t:['Nagpur Santra','Cold-Pressed Zest','Vitamin C Rich'],loc:'📍 Nagpur, Maharashtra',sw:'82%',ac:'88%',bd:'70%',ch:'1°C'},
+{n:'Sugarcane Lemon Ginger',c:'#8cbf2f',p:69,d:'Fresh-pressed Indian sugarcane infused with cold yellow lemon and a warm Himalayan ginger kick. The ultimate hydrating cooler.',t:['Raw Sugarcane','Yellow Lemon','Himalayan Ginger'],loc:'📍 Kolhapur, Maharashtra',sw:'90%',ac:'74%',bd:'65%',ch:'2°C'},
+{n:'Bhagwa Pomegranate',c:'#d41f4d',p:109,d:'Deep ruby Bhagwa pomegranate arils pressed whole for tart, rich antioxidants with a crisp squeeze of fresh Key lime.',t:['Solapur Pomegranate','Key Lime','Polyphenol Dense'],loc:'📍 Solapur, Maharashtra',sw:'74%',ac:'92%',bd:'85%',ch:'3°C'},
+{n:'Tender Coconut',c:'#7fb069',p:89,d:'Electrolyte-packed tender coconut water harvested fresh from southern coastal groves, micro-filtered cold and clear.',t:['Coastal Coconut Water','Micro-Filtered','Pure Electrolytes'],loc:'📍 Pollachi, Tamil Nadu',sw:'68%',ac:'40%',bd:'50%',ch:'1°C'}];
+
+const $=s=>document.querySelector(s),TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let sel=0,cart=0,spinT=0,redraw=()=>{};
+let k=0;$('#h1').setAttribute('aria-label','Cold pressed. Never cooked.');
+$('#h1').innerHTML=['COLD PRESSED.','NEVER COOKED.'].map(w=>'<span class="ln" aria-hidden="true">'+w.split(' ').map(wd=>'<span class="wd">'+[...wd].map(ch=>'<span class="l" style="--i:'+(k++)+'">'+ch+'</span>').join('')+'</span>').join('<span class="sp"></span>')+'</span>').join('');
+document.body.classList.add('go');
+
+/* Interactive Cursor Spotlight Tracker */
+const spot=$('#spotlight');
+let curX=innerWidth/2,curY=innerHeight/2,sX=curX,sY=curY;
+addEventListener('pointermove',e=>{curX=e.clientX;curY=e.clientY});
+function animSpot(){
+  sX+=(curX-sX)*.12;sY+=(curY-sY)*.12;
+  if(spot)spot.style.transform=`translate(${sX}px, ${sY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animSpot);
+}
+animSpot();
+
+/* 3D Tilt Effect on Interactive Cards */
+['#pn', '.comp-card', '.why-card'].forEach(sel=>{
+  document.querySelectorAll(sel).forEach(el=>{
+    el.addEventListener('mousemove',e=>{
+      const rect=el.getBoundingClientRect(),x=(e.clientX-rect.left)/rect.width-.5,y=(e.clientY-rect.top)/rect.height-.5;
+      el.style.transform=`perspective(1000px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`;
+    });
+    el.addEventListener('mouseleave',()=>{el.style.transform='perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0)'});
+  });
+});
+
+const chips=$('#chips');
+F.forEach((f,i)=>{const b=document.createElement('button');b.className='sw';b.innerHTML='<i style="--k:'+f.c+'"></i>'+f.n;b.onclick=()=>pick(i);chips.append(b)});
+chips.addEventListener('keydown',e=>{if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;e.preventDefault();const n=(sel+(e.key==='ArrowRight'?1:F.length-1))%F.length;pick(n);chips.children[n].focus()});
+
+function pick(i){
+  sel=i;spinT+=TAU;const f=F[i];
+  [...chips.children].forEach((b,j)=>{b.setAttribute('aria-pressed',j===i);b.tabIndex=j===i?0:-1});
+  {const ch=chips.children[i];chips.scrollTo({left:ch.offsetLeft-chips.clientWidth/2+ch.clientWidth/2,behavior:'smooth'})}
+  $('#fn').textContent=f.n;$('#fd').textContent=f.d;$('#fp').textContent='₹'+f.p;
+  $('#fterr').textContent=f.loc;
+  $('#ft').innerHTML=f.t.map(t=>'<li>'+t+'</li>').join('');
+  
+  // Update Taste Radar
+  $('#tr-sw').textContent=f.sw;$('#tb-sw').style.width=f.sw;
+  $('#tr-ac').textContent=f.ac;$('#tb-ac').style.width=f.ac;
+  $('#tr-bd').textContent=f.bd;$('#tb-bd').style.width=f.bd;
+  $('#tr-ch').textContent=f.ch;
+  
+  const p=$('#pn');p.classList.remove('pop');void p.offsetWidth;p.classList.add('pop');redraw();
+}
+
+/* Mobile Touch Swipe on Flavour Panel */
+let touchStartX=0,touchStartY=0;
+const pnl=$('#pn');
+if(pnl){
+  pnl.addEventListener('touchstart',e=>{
+    touchStartX=e.changedTouches[0].clientX;
+    touchStartY=e.changedTouches[0].clientY;
+  },{passive:true});
+  pnl.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-touchStartX,dy=e.changedTouches[0].clientY-touchStartY;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.4){
+      if(dx<0)pick((sel+1)%F.length);
+      else pick((sel+F.length-1)%F.length);
+    }
+  },{passive:true});
+}
+
+const bgEl=document.getElementById('bg'),INR=n=>'₹'+n.toLocaleString('en-IN');
+let CART={};try{CART=JSON.parse(localStorage.getItem('sipito-cart')||'{}')}catch(e){}
+Object.keys(CART).forEach(k=>{if(!F[k]||!(CART[k]>0))delete CART[k]});
+function saveCart(){try{localStorage.setItem('sipito-cart',JSON.stringify(CART))}catch(e){}}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),2800)}
+
+function renderCart(){const ks=Object.keys(CART),cnt=ks.reduce((a,k)=>a+CART[k],0),tot=ks.reduce((a,k)=>a+CART[k]*F[k].p,0);
+ $('#cn').textContent=cnt;$('#cart').setAttribute('aria-label','Cart, '+cnt+(cnt===1?' item':' items'));
+ $('#dl').innerHTML=ks.length?ks.map(k=>'<li><i style="--k:'+F[k].c+'"></i><div><b>'+F[k].n+'</b><small>330 ml · '+INR(F[k].p)+'</small></div><div class="qty"><button type="button" data-k="'+k+'" data-d="-1" aria-label="Remove one '+F[k].n+'">−</button><span>'+CART[k]+'</span><button type="button" data-k="'+k+'" data-d="1" aria-label="Add one '+F[k].n+'">+</button></div></li>').join(''):'<li class="empty">Your cart is empty.<br>Choose a flavour and add cold-pressed cans.</li>';
+ $('#dt').textContent=INR(tot);$('#ck').disabled=!ks.length}
+
+const dr=$('#drawer');let lastF=null;
+function openCart(){lastF=document.activeElement;dr.classList.add('on');dr.removeAttribute('inert');document.body.classList.add('dopen');$('#dx').focus()}
+function closeCart(){dr.classList.remove('on');dr.setAttribute('inert','');document.body.classList.remove('dopen');if(lastF&&lastF.focus)lastF.focus()}
+$('#cart').onclick=openCart;$('#dx').onclick=closeCart;$('#dscrim').onclick=closeCart;
+addEventListener('keydown',e=>{if(e.key==='Escape'&&dr.classList.contains('on'))closeCart()});
+$('#dl').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.k;CART[k]=(CART[k]||0)+Number(b.dataset.d);if(CART[k]<=0)delete CART[k];saveCart();renderCart()});
+$('#ck').onclick=()=>toast('Cold-chain express dispatch order created!');
+$('#add').onclick=()=>{CART[sel]=(CART[sel]||0)+1;saveCart();renderCart();const c=$('#cart');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump');spinT+=TAU;toast('Added '+F[sel].n+' · '+INR(F[sel].p))};
+
+function initUI(){const upBg=()=>{const bw=document.querySelector('.bywrap');if(bw)bw.classList.toggle('off',scrollY>innerHeight*.35);bgEl.style.opacity=Math.max(0,Math.min(1,1.15-Math.min(1,scrollY/(innerHeight*.8))*1.3))};addEventListener('scroll',upBg,{passive:true});addEventListener('resize',upBg);upBg();const yr=$('#yr');if(yr)yr.textContent=new Date().getFullYear();
+ const rv=[...document.querySelectorAll('.rv')];
+ if(!('IntersectionObserver' in window)){rv.forEach(e=>e.classList.add('in'));return}
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});rv.forEach(e=>io.observe(e));
+ const links=[...document.querySelectorAll('.bar a[href^="#"]')],no=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+ ['flavours','why','compare'].forEach(id=>{const el=document.getElementById(id);if(el)no.observe(el)})}
+pick(0);renderCart();initUI();
+
+/* 3D Can on Landing Page */
+try{
+const R=new THREE.WebGLRenderer({canvas:$('#gl'),antialias:true,alpha:true});
+R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.35;
+const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(35,1,.1,50);
+const ec=document.createElement('canvas');ec.width=512;ec.height=256;const e=ec.getContext('2d');e.fillStyle='#050508';e.fillRect(0,0,512,256);
+[[40,30,80,170,'#fff'],[210,10,140,50,'#ffe6bd'],[380,50,50,160,'#a9c0ff'],[470,20,40,100,'#fff']].forEach(a=>{e.fillStyle=a[4];e.fillRect(a[0],a[1],a[2],a[3])});
+const et=new THREE.CanvasTexture(ec);et.mapping=THREE.EquirectangularReflectionMapping;et.encoding=THREE.sRGBEncoding;
+scene.environment=new THREE.PMREMGenerator(R).fromEquirectangular(et).texture;
+scene.add(new THREE.AmbientLight(0xffffff,.28));
+const key=new THREE.DirectionalLight(0xffffff,1.7);key.position.set(3,4,5);scene.add(key);
+const rim=new THREE.PointLight(0xffffff,4.2,0);rim.position.set(-3.5,1.5,-2.5);scene.add(rim);
+const rim2=new THREE.PointLight(0xffffff,2.8,0);rim2.position.set(4,-1,-2);scene.add(rim2);
+const cutL=new THREE.PointLight(0xffffff,0,9);scene.add(cutL);
+const mL=new THREE.PointLight(0xffffff,8,14);scene.add(mL);
+
+const cv=document.createElement('canvas');cv.width=2048;cv.height=1032;const g=cv.getContext('2d');
+const tT=new THREE.CanvasTexture(cv),tB=new THREE.CanvasTexture(cv);
+[tT,tB].forEach(t=>{t.wrapS=THREE.RepeatWrapping;t.offset.x=.5;t.repeat.y=.5;t.encoding=THREE.sRGBEncoding;t.anisotropy=8});tT.offset.y=.5;
+const rgb=(h,f,a)=>{const n=parseInt((h||'#f2a81d').slice(1),16)||0;return'rgba('+[n>>16,n>>8&255,n&255].map(v=>Math.min(255,Math.round(v*f))).join(',')+','+(a==null?1:a)+')'};
+const FC=['#e9891a','#ee6b88','#f08a12','#8fc23a','#b01535','#7fa34a'];
+
+function fruit(g,x,y,r,col){
+  const q=g.createRadialGradient(x-r*.35,y-r*.4,r*.08,x,y,r);
+  q.addColorStop(0,rgb(col,1.35));q.addColorStop(.5,rgb(col,1));q.addColorStop(1,rgb(col,.4));
+  g.fillStyle=q;g.beginPath();g.arc(x,y,r,0,TAU);g.fill();
+  g.fillStyle='rgba(0,0,0,.3)';g.beginPath();g.ellipse(x,y-r*.62,r*.26,r*.1,0,0,TAU);g.fill();
+  g.fillStyle='rgba(255,255,255,.6)';g.beginPath();g.ellipse(x-r*.38,y-r*.36,r*.2,r*.1,-.7,0,TAU);g.fill();
+}
+function fit(g,t,max,px,fam,w){
+  g.font=(w||'')+' '+px+'px '+fam;const m=g.measureText(t).width;
+  if(m>max)g.font=(w||'')+' '+Math.floor(px*max/m)+'px '+fam;
+}
+
+function makeCanTexture(idx){
+  const cv=document.createElement('canvas');cv.width=2048;cv.height=1024;const g=cv.getContext('2d');
+  const f=F[idx],c=f.c;
+  
+  // Metallic Brushed Aluminum Background
+  const W=g.createLinearGradient(0,0,2048,0);
+  W.addColorStop(0,'#b4b8c0');W.addColorStop(.15,'#f8fafc');W.addColorStop(.3,'#e2e6eb');
+  W.addColorStop(.5,'#ffffff');W.addColorStop(.7,'#e2e6eb');W.addColorStop(.85,'#f8fafc');W.addColorStop(1,'#b4b8c0');
+  g.fillStyle=W;g.fillRect(0,0,2048,1024);
+  
+  // Fine horizontal metallic grain
+  g.fillStyle='rgba(0,0,0,.025)';
+  for(let y=0;y<1024;y+=4)g.fillRect(0,y,2048,1.5);
+  
+  // Top and Bottom Aluminum Chime Highlights
+  g.fillStyle='rgba(255,255,255,.35)';g.fillRect(0,0,2048,16);
+  g.fillStyle='rgba(0,0,0,.08)';g.fillRect(0,1008,2048,16);
+
+  // ==================== FRONT FACE (Center: x = 1024) ====================
+  const cx=1024;
+  
+  // Signature Organic Color Wave Banner at Bottom
+  const wy=x=>680+Math.sin((x-cx)/110)*24+Math.sin((x-cx)/45)*8;
+  const B=g.createLinearGradient(0,640,0,1024);
+  B.addColorStop(0,rgb(c,1.05,.95));B.addColorStop(.35,rgb(c,.85,.98));B.addColorStop(1,rgb(c,.45,1));
+  g.fillStyle=B;
+  g.beginPath();g.moveTo(0,1024);for(let x=0;x<=2048;x+=12)g.lineTo(x,wy(x));g.lineTo(2048,1024);g.closePath();g.fill();
+  
+  // Wave Crest Foam Accent
+  g.strokeStyle='rgba(255,255,255,.7)';g.lineWidth=4;
+  g.beginPath();for(let x=0;x<=2048;x+=12)x?g.lineTo(x,wy(x)):g.moveTo(x,wy(x));g.stroke();
+
+  // Top Golden "S" Shield Emblem (x = 1024, y = 110)
+  const gGold=g.createLinearGradient(cx-44,70,cx+44,158);
+  gGold.addColorStop(0,'#fff8cc');gGold.addColorStop(.25,'#ffd700');gGold.addColorStop(.65,'#d4af37');gGold.addColorStop(1,'#8c5e0e');
+  g.fillStyle=gGold;
+  g.beginPath();
+  if(g.roundRect)g.roundRect(cx-44,70,88,88,20);else g.rect(cx-44,70,88,88);
+  g.fill();
+  g.strokeStyle='rgba(255,255,255,.9)';g.lineWidth=3.5;g.stroke();
+  g.fillStyle='#0a0806';g.font='900 60px Anton,Impact,sans-serif';g.textAlign='center';
+  g.fillText('S',cx,137);
+
+  // Brand Name "SIPITO"
+  g.fillStyle='#0f1118';g.font='900 76px Anton,Impact,sans-serif';g.fillText('SIPITO',cx,235);
+  // Gold Accent underline
+  g.fillStyle=gGold;g.fillRect(cx-125,250,250,5);
+
+  // Cold-Pressed Subheading
+  g.fillStyle='#333742';g.font='700 22px "Space Grotesk",sans-serif';g.fillText('100% COLD-PRESSED NECTAR',cx,290);
+
+  // Flavor Name
+  g.fillStyle='#11131a';fit(g,f.n.toUpperCase(),540,64,'Anton,Impact,sans-serif');
+  g.fillText(f.n.toUpperCase(),cx,375);
+
+  // Origin & Cold-Press Claim
+  g.fillStyle='#4b5563';g.font='600 20px "Space Grotesk",sans-serif';
+  g.fillText('SINGLE-ORIGIN · NEVER HEATED · NO ADDED SUGAR',cx,415);
+
+  // Superfruit Illustration (x = 1024, y = 550)
+  g.save();g.translate(cx+150,510);g.rotate(-.45);g.fillStyle='#3e8532';g.beginPath();g.ellipse(0,0,85,42,0,0,TAU);g.fill();g.fillStyle='rgba(255,255,255,.22)';g.fillRect(-75,-2,150,4);g.restore();
+  fruit(g,cx-80,560,95,FC[idx]);fruit(g,cx+80,535,115,FC[idx]);
+
+  // Volume & Raw Stamp in Wave Area
+  g.fillStyle='#ffffff';g.font='900 48px Anton,Impact,sans-serif';g.fillText('330 ML',cx,820);
+  g.fillStyle='rgba(255,255,255,.9)';g.font='700 21px "Space Grotesk",sans-serif';g.fillText('RAW LIVING SUPERFRUIT PULSE',cx,865);
+  g.font='600 16px "Space Grotesk",monospace';g.fillText('CRYO-PRESS NO. '+ (idx+1).toString().padStart(2,'0') +' · CANNED AT SOURCE',cx,905);
+
+  // ==================== SIDE PANEL 1: NUTRITION & SOURCING (Left: x = 360) ====================
+  const sx1=360;
+  g.fillStyle='rgba(0,0,0,.06)';g.fillRect(sx1-170,160,340,680);
+  g.strokeStyle='rgba(0,0,0,.15)';g.lineWidth=2;g.strokeRect(sx1-170,160,340,680);
+  g.fillStyle='#11131a';g.textAlign='left';
+  g.font='900 28px Anton,Impact,sans-serif';g.fillText('NUTRITION FACTS',sx1-145,210);
+  g.font='600 15px "Space Grotesk",sans-serif';g.fillText('Serving Size: 1 Can (330ml)',sx1-145,236);
+  g.fillStyle='#000';g.fillRect(sx1-145,248,290,4);
+  
+  const nuts=[['Energy','48 kcal'],['Total Fat','0 g'],['Natural Fruit Sugars','9.4 g'],['Added Refined Sugar','0.0 g'],['Dietary Fibre','2.8 g'],['Vitamin C','120% RDA'],['Potassium','280 mg'],['Live Active Enzymes','100%']];
+  nuts.forEach((n,k)=>{
+    const ny=285+k*36;
+    g.fillStyle='#27272a';g.font='600 16px "Space Grotesk",sans-serif';g.fillText(n[0],sx1-145,ny);
+    g.textAlign='right';g.font='700 16px "Space Grotesk",sans-serif';g.fillText(n[1],sx1+145,ny);
+    g.textAlign='left';g.fillStyle='rgba(0,0,0,.1)';g.fillRect(sx1-145,ny+10,290,1);
+  });
+
+  g.fillStyle='#18181b';g.font='900 20px Anton,Impact,sans-serif';g.fillText('THE SIPITO PROMISE',sx1-145,620);
+  g.fillStyle='#52525b';g.font='500 14px "Space Grotesk",sans-serif';
+  g.fillText('Hydraulically cold-pressed at 3.5°C.',sx1-145,650);
+  g.fillText('Zero thermal treatment. Zero heat.',sx1-145,672);
+  g.fillText('Retains full cellular vitality & aroma.',sx1-145,694);
+  g.fillText('Keep refrigerated at 0°C to 4°C.',sx1-145,716);
+
+  // ==================== SIDE PANEL 2: BARCODE & SUSTAINABILITY (Right: x = 1680) ====================
+  const sx2=1680;
+  g.fillStyle='rgba(0,0,0,.06)';g.fillRect(sx2-170,160,340,680);
+  g.strokeStyle='rgba(0,0,0,.15)';g.lineWidth=2;g.strokeRect(sx2-170,160,340,680);
+  
+  g.fillStyle='#11131a';g.textAlign='left';
+  g.font='900 24px Anton,Impact,sans-serif';g.fillText('ENDLESSLY RECYCLABLE',sx2-145,210);
+  g.fillStyle='#52525b';g.font='500 14px "Space Grotesk",sans-serif';
+  g.fillText('100% aluminium can body & end.',sx2-145,240);
+  g.fillText('Infinitely circular packaging.',sx2-145,262);
+  g.fillText('BPA-NI non-intent sanitary lining.',sx2-145,284);
+
+  // Barcode Graphic
+  g.fillStyle='#ffffff';g.fillRect(sx2-130,360,260,140);
+  g.strokeStyle='#000000';g.lineWidth=1.5;g.strokeRect(sx2-130,360,260,140);
+  g.fillStyle='#000000';
+  for(let bx=sx2-115;bx<sx2+115;bx+=((bx*7)%5===0?6:3)){
+    g.fillRect(bx,375,(bx%4===0?3:1.5),100);
+  }
+  g.font='700 13px "Space Grotesk",monospace';g.textAlign='center';
+  g.fillText('8 901234 56789'+idx,sx2,492);
+
+  g.textAlign='left';g.fillStyle='#18181b';g.font='900 18px Anton,Impact,sans-serif';g.fillText('CERTIFIED AT SOURCE',sx2-145,550);
+  g.fillStyle='#52525b';g.font='500 14px "Space Grotesk",sans-serif';
+  g.fillText('FSSAI LIC. NO. 10022022000542',sx2-145,580);
+  g.fillText('Origin: Maharashtra & Karnataka',sx2-145,602);
+  g.fillText('Manufactured by: SIPITO BEVERAGES',sx2-145,624);
+  g.fillText('Best before 60 days from batch.',sx2-145,646);
+
+  const t=new THREE.CanvasTexture(cv);t.wrapS=THREE.RepeatWrapping;t.offset.x=.5;t.encoding=THREE.sRGBEncoding;t.anisotropy=8;return t;
+}
+
+const bodyM=t=>new THREE.MeshPhysicalMaterial({map:t,metalness:.3,roughness:.32,clearcoat:.95,clearcoatRoughness:.08,envMapIntensity:1.35});
+const silver=new THREE.MeshStandardMaterial({color:0xdfe3e8,metalness:.95,roughness:.18,side:THREE.DoubleSide});
+const lathe=p=>new THREE.LatheGeometry(p.map(a=>new THREE.Vector2(a[0],a[1])),64);
+const M=(geo,mat,x,y,z,rx)=>{const m=new THREE.Mesh(geo,mat);m.position.set(x||0,y||0,z||0);m.rotation.x=rx||0;return m};
+
+const rig=new THREE.Group();scene.add(rig);
+const canList=[];
+const canSplashList=[];
+const o3=new THREE.Object3D();
+
+// Build all 6 flavoured 3D cans
+F.forEach((f,idx)=>{
+  const canTex=makeCanTexture(idx);
+  const cGroup=new THREE.Group(), canBody=new THREE.Group();
+  
+  // 1. Single Seamless Cylinder Body with full UV wrap
+  const canMesh=new THREE.Mesh(new THREE.CylinderGeometry(.6,.6,1.9,96,1,true), bodyM(canTex));
+  canMesh.position.y=0;
+  canBody.add(canMesh);
+  
+  // Top Neck In & Rim
+  const topNeck=M(lathe([[.6,.95],[.585,1.02],[.53,1.09],[.49,1.13],[.48,1.16],[.5,1.18],[.49,1.19],[.455,1.17],[.44,1.12]]),silver);
+  const topLid=M(new THREE.CircleGeometry(.44,48),silver,0,1.12,0,-Math.PI/2);
+  const pullTab=M(new THREE.BoxGeometry(.18,.025,.32),silver,0,1.135,-.06);
+  
+  // Bottom Neck In & Concave Base Dome
+  const botNeck=M(lathe([[.6,-.95],[.585,-1.02],[.53,-1.09],[.5,-1.13],[.45,-1.15],[.4,-1.13],[.3,-1.1]]),silver);
+  const botDome=M(new THREE.CircleGeometry(.3,32),silver,0,-1.1,0,Math.PI/2);
+  
+  canBody.add(topNeck,topLid,pullTab,botNeck,botDome);
+  cGroup.add(canBody);
+
+  // Micro Dew Condensation Droplets
+  const dewMesh=new THREE.InstancedMesh(new THREE.SphereGeometry(1,8,8),new THREE.MeshPhysicalMaterial({color:0xffffff,roughness:0,metalness:0,clearcoat:1,transparent:true,opacity:.45,envMapIntensity:2.6}),90);
+  for(let k=0;k<90;k++){
+    const a=Math.random()*TAU,y=-.85+Math.random()*1.7,r=.01+Math.pow(Math.random(),2)*.03;
+    o3.position.set(Math.sin(a)*.603,y,Math.cos(a)*.603);
+    o3.lookAt(Math.sin(a)*2,y,Math.cos(a)*2);
+    o3.scale.set(r,r*(1+Math.random()*.8),r*.5);
+    o3.updateMatrix();
+    dewMesh.setMatrixAt(k,o3.matrix);
+  }
+  dewMesh.instanceMatrix.needsUpdate=true;dewMesh.frustumCulled=false;canBody.add(dewMesh);
+
+  // Splash Crown Under Each Can
+  const splashCrownMat=new THREE.MeshPhysicalMaterial({color:new THREE.Color(f.c).convertSRGBToLinear(),emissive:new THREE.Color(f.c).convertSRGBToLinear(),emissiveIntensity:.45,roughness:.06,metalness:0,clearcoat:1,transparent:true,opacity:.85,envMapIntensity:2.4});
+  const splashCrown=new THREE.Mesh(new THREE.TorusGeometry(.68,.04,16,48),splashCrownMat);
+  splashCrown.rotation.x=Math.PI/2;splashCrown.position.y=-.96;
+  cGroup.add(splashCrown);
+  canSplashList.push({mesh:splashCrown,mat:splashCrownMat});
+
+  cGroup.userData={id:idx,body:canBody};
+  rig.add(cGroup);
+  canList.push(cGroup);
+});
+/* Dynamic Juice Splash Droplets & Vortex Mist */
+const splash=new THREE.Group();splash.position.z=-.3;rig.add(splash);
+const sm=new THREE.MeshPhysicalMaterial({color:0xffffff,emissive:0xffffff,emissiveIntensity:.4,roughness:.05,metalness:0,clearcoat:1,transparent:true,opacity:.88,envMapIntensity:2.4});
+
+// Main Center Splash Crown
+const crownGeo=new THREE.TorusGeometry(.78,.045,16,64);
+const crownMesh=new THREE.Mesh(crownGeo,sm);crownMesh.rotation.x=Math.PI/2;crownMesh.position.y=-.95;splash.add(crownMesh);
+
+// 160 Dynamic Multi-Color Juice Splash Particles
+const NP=160,ip=new THREE.InstancedMesh(new THREE.SphereGeometry(1,12,12),sm,NP),dm=new THREE.Object3D();ip.frustumCulled=false;splash.add(ip);
+const P=new Float32Array(NP*3),V=new Float32Array(NP*3),S=new Float32Array(NP),D=new Float32Array(NP);
+
+function spawn(i,w){
+  const a=Math.random()*TAU,rad=(.65+Math.random()*2.2)*(w?1:.7),y=-.95+Math.random()*.5;
+  P.set([Math.cos(a)*rad,y,Math.sin(a)*rad],i*3);
+  V.set([Math.cos(a)*(1.2+Math.random()*2.8)+Math.sin(a)*.8,1.4+Math.random()*2.8,Math.sin(a)*(1.2+Math.random()*2.8)-Math.cos(a)*.8],i*3);
+  S[i]=.009+Math.pow(Math.random(),2)*.028;
+  D[i]=0;
+}
+for(let i=0;i<NP;i++)spawn(i,1);
+
+let mx=0,my=0,smx=0,smy=0,mob=false,flashed=false,spin=0,shake=0;
+let isDragging=false,dragStartX=0,dragStartY=0,dragVelX=0,dragVelY=0,userRotX=0,userRotY=0;
+
+// Universal Pointer & Touch Dragging
+addEventListener('pointerdown',e=>{
+  if(e.target.closest('button, a, input, select, textarea, #drawer, .bar, .chips, .sw'))return;
+  isDragging=true;
+  dragStartX=e.clientX;
+  dragStartY=e.clientY;
+  dragVelX=0;
+  dragVelY=0;
+},{passive:true});
+
+addEventListener('pointermove',e=>{
+  mx=e.clientX/innerWidth*2-1;
+  my=e.clientY/innerHeight*2-1;
+  if(!isDragging)return;
+  const dx=e.clientX-dragStartX,dy=e.clientY-dragStartY;
+  dragStartX=e.clientX;
+  dragStartY=e.clientY;
+  dragVelX=dx*0.014;
+  dragVelY=dy*0.014;
+  userRotY+=dragVelX;
+  userRotX+=dragVelY;
+},{passive:true});
+
+const endDrag=()=>{isDragging=false};
+addEventListener('pointerup',endDrag);
+addEventListener('pointercancel',endDrag);
+
+// Click directly on any 3D can to select flavour
+const raycaster=new THREE.Raycaster(),mouseVec=new THREE.Vector2();
+addEventListener('click',e=>{
+  if(e.target.closest('button, a, input, select, textarea, #drawer, .bar, .chips, .sw'))return;
+  mouseVec.x=(e.clientX/innerWidth)*2-1;
+  mouseVec.y=-(e.clientY/innerHeight)*2+1;
+  raycaster.setFromCamera(mouseVec,cam);
+  const hits=raycaster.intersectObjects(canList,true);
+  if(hits.length>0){
+    let o=hits[0].object;
+    while(o&&o.userData.id===undefined&&o.parent)o=o.parent;
+    if(o&&o.userData.id!==undefined){
+      pick(o.userData.id);
+      shake=Math.min(shake+.6,1.2);
+    }
+  }
+});
+
+if(window.DeviceOrientationEvent){
+  addEventListener('deviceorientation',e=>{
+    if(e.gamma!=null&&e.beta!=null){
+      smx+=(clamp(e.gamma/28,-1,1)-smx)*.06;
+      smy+=(clamp((e.beta-40)/28,-1,1)-smy)*.06;
+    }
+  },{passive:true});
+}
+
+function rs(){
+  const W=innerWidth,H=innerHeight;mob=W<850;
+  R.setPixelRatio(Math.min(devicePixelRatio,mob?1.5:2));
+  ip.count=mob?90:NP;
+  R.setSize(W,H,false);cam.aspect=W/H;cam.updateProjectionMatrix();
+}
+addEventListener('resize',rs);rs();
+
+const cur=new THREE.Color(F[0].c),tg=new THREE.Color(),lin=new THREE.Color(),white=new THREE.Color(1,1,1);
+let last=performance.now(),t0=last,lastHex='';
+const tl=reduce?9:0,IMP=2.05;
+
+let lastScrollY=scrollY,scrollVel=0;
+addEventListener('scroll',()=>{
+  const dy=scrollY-lastScrollY;
+  lastScrollY=scrollY;
+  scrollVel+=(dy-scrollVel)*.45;
+},{passive:true});
+
+(function loop(now){requestAnimationFrame(loop);
+ const dt=Math.min((now-last)/1000,.05);last=now;const t=(now-t0)/1000+tl;
+ smx+=(mx-smx)*.06;smy+=(my-smy)*.06;
+ scrollVel*=.88;
+ const scrollTilt=clamp(scrollVel*.0035,-.28,.28);
+ 
+ tg.set(F[sel].c);cur.lerp(tg,.07);const hex='#'+cur.getHexString();
+ if(hex!==lastHex){lastHex=hex;document.documentElement.style.setProperty('--c',hex)}
+ lin.copy(cur).convertSRGBToLinear();
+ rim.color.copy(lin);rim2.color.copy(lin);cutL.color.copy(lin);sm.color.copy(lin);sm.emissive.copy(lin);
+ 
+ const p=clamp(scrollY/(innerHeight*.8),0,1);
+ const sec=scrollY/(innerHeight*.95);
+ bgEl.style.opacity=clamp(1.15-p*1.3,0,1);
+ const fly=clamp((t-.3)/1.75,0,1),fe=1-Math.pow(1-fly,3),dolly=1-Math.pow(1-clamp(t/5,0,1),3);
+ if(!flashed&&t>IMP){flashed=true;shake=1;if(!reduce){$('#fx').classList.add('on');$('#sk').classList.add('on')}}
+ shake*=Math.pow(.02,dt);spin+=(spinT-spin)*Math.min(dt*4,1);
+ 
+ if(!isDragging){
+   dragVelX*=.92;dragVelY*=.92;
+   userRotY+=dragVelX;userRotX+=dragVelY;
+ }
+ userRotX*=.95;
+
+ // Smoothly transition from right-aligned (x = 2.4) in Hero/Flavours to dead center (x = 0) in Craft Difference
+ const centerProgress=clamp((sec-1.5)/0.8,0,1);
+ const rigBaseX=mob?0:(2.4*(1-centerProgress));
+ const rigBaseY=(mob?1.6:0)*(1-centerProgress)+Math.sin(t*.9)*.07;
+ rig.position.set(rigBaseX,rigBaseY,-(1-fe)*16);
+ rig.scale.setScalar(mob?.78:1);
+ 
+ // Multi-Phase Section-Driven 3D Can Choreography with Cool Section Transition Motion
+  const transProgress = clamp(sec / 0.85, 0, 1);
+  const burstMotion = Math.sin(transProgress * Math.PI); // Peaks during section transition
+
+  canList.forEach((cGroup,idx)=>{
+    const diff=((idx-sel)%F.length+F.length+3)%F.length-3;
+    const body=cGroup.userData.body;
+    const splashRing=canSplashList[idx].mesh;
+
+    if(sec<0.7){
+      // Section 1 (Landing Page / Hero): Subtle, aesthetic tilt for premium showcase
+      if(diff===0){
+        // Active can: gentle ~6.8 deg forward pitch and ~4.5 deg subtle roll
+        const targetRotX = 0.12 - smy * 0.05;
+        const targetRotZ = -0.08 + Math.sin(t * 0.6) * 0.02;
+        cGroup.rotation.x += (targetRotX - cGroup.rotation.x) * .14;
+        cGroup.rotation.z += (targetRotZ - cGroup.rotation.z) * .14;
+
+        // Active can swoops forward smoothly during transition
+        const burstZ = burstMotion * 1.1;
+        const burstY = -burstMotion * 0.2;
+        cGroup.position.lerp(new THREE.Vector3(0, burstY, burstZ),.15);
+        cGroup.scale.lerp(new THREE.Vector3(1 + burstMotion * 0.15, 1 + burstMotion * 0.15, 1 + burstMotion * 0.15),.15);
+        body.rotation.y=(1-fe)*TAU*2 + .55*Math.sin(t*.35) + smx*.4 + spin + userRotY + transProgress * Math.PI * 0.4;
+        splashRing.scale.lerp(new THREE.Vector3(1.2 + .08*Math.sin(t*3) + burstMotion*0.6, 1.2 + .08*Math.sin(t*3) + burstMotion*0.6, 1),.15);
+        canSplashList[idx].mat.opacity=.9*(1-p*.7);
+      } else {
+        // Outer cans: gentle ~5.7 deg pitch and symmetrical outward fan tilt (~3.4 deg)
+        const targetRotX = 0.10 + Math.sin(t * 0.8 + idx) * 0.03;
+        const targetRotZ = diff * -0.06;
+        cGroup.rotation.x += (targetRotX - cGroup.rotation.x) * .12;
+        cGroup.rotation.z += (targetRotZ - cGroup.rotation.z) * .12;
+
+        // Outer cans fan out and elevate during the scroll transition
+        const arcAng=diff*0.48 + (diff > 0 ? 1 : -1) * burstMotion * 0.22;
+        const targetX=Math.sin(arcAng)*(mob?1.8:2.8) * (1 + burstMotion * 0.35);
+        const targetY=-Math.abs(diff)*0.18 + Math.sin(t*1.2+idx*1.1)*0.08 + Math.sin(diff*1.5)*burstMotion*0.45;
+        const targetZ=-Math.abs(diff)*(mob?2.0:2.6) + Math.cos(arcAng)*0.5 - 0.8 - burstMotion * 0.8;
+        const targetScale=Math.max(0.7, 1 - Math.abs(diff)*0.12) * (1 - burstMotion * 0.1);
+        
+        cGroup.position.lerp(new THREE.Vector3(targetX,targetY,targetZ),.12);
+        cGroup.scale.lerp(new THREE.Vector3(targetScale,targetScale,targetScale),.12);
+        body.rotation.y+=(diff*-0.4 + t*.4 + Math.sin(t*.3+idx)*.2 + burstMotion*diff*0.5 - body.rotation.y)*.1;
+        splashRing.scale.lerp(new THREE.Vector3(targetScale*(1+burstMotion*0.4),targetScale*(1+burstMotion*0.4),1),.1);
+        canSplashList[idx].mat.opacity=.65*(1-p*.8);
+      }
+    } else if(sec>=0.7&&sec<1.7){
+      // Section 2 (Flavours Discovery): Selected Can in Focal Center Stage
+      if(diff===0){
+        cGroup.rotation.x += (0.05 - smy * 0.04 - cGroup.rotation.x) * .14;
+        cGroup.rotation.z += (0 - cGroup.rotation.z) * .14;
+        cGroup.position.lerp(new THREE.Vector3(0,0,.5),.14);
+        cGroup.scale.lerp(new THREE.Vector3(1.18,1.18,1.18),.14);
+        body.rotation.y=(1-fe)*TAU*2 + .6*Math.sin(t*.4) + smx*.3 + spin + userRotY;
+        splashRing.scale.lerp(new THREE.Vector3(1.45+.1*Math.sin(t*3.5),1.45+.1*Math.sin(t*3.5),1),.15);
+        canSplashList[idx].mat.opacity=.95;
+      } else {
+        cGroup.rotation.x += (0.06 - cGroup.rotation.x) * .12;
+        cGroup.rotation.z += (diff * -0.04 - cGroup.rotation.z) * .12;
+        const ang=diff*.55+t*.15;
+        const targetX=Math.sin(ang)*(mob?1.9:3.0);
+        const targetY=-.2+Math.sin(t*1.4+idx)*.12;
+        const targetZ=-2.2-Math.abs(diff)*1.1;
+        cGroup.position.lerp(new THREE.Vector3(targetX,targetY,targetZ),.12);
+        cGroup.scale.lerp(new THREE.Vector3(.72,.72,.72),.12);
+        body.rotation.y+=(t*.6+idx - body.rotation.y)*.1;
+        splashRing.scale.lerp(new THREE.Vector3(.75,.75,1),.1);
+        canSplashList[idx].mat.opacity=.5;
+      }
+    } else {
+      // Section 3 & 4 (Why SIPITO & Craft Difference): All Cans Centered in 3D Orbital Pedestal Ring
+      cGroup.rotation.x += (0.04 - cGroup.rotation.x) * .12;
+      cGroup.rotation.z += (0 - cGroup.rotation.z) * .12;
+      const orbitAng=idx*(TAU/6)+t*.32;
+      const rad=mob?2.2:3.6;
+      const targetX=Math.sin(orbitAng)*rad;
+      const targetY=0.3+Math.sin(t*1.4+idx*1.05)*.18;
+      const targetZ=Math.cos(orbitAng)*rad*.6-1.2;
+      const targetScale=diff===0?1.1:.85;
+      
+      cGroup.position.lerp(new THREE.Vector3(targetX,targetY,targetZ),.12);
+      cGroup.scale.lerp(new THREE.Vector3(targetScale,targetScale,targetScale),.12);
+      body.rotation.y+=(orbitAng+Math.PI/2 - body.rotation.y)*.1;
+      splashRing.scale.lerp(new THREE.Vector3(targetScale*1.15,targetScale*1.15,1),.1);
+      canSplashList[idx].mat.opacity=.82;
+    }
+  });
+
+  splash.rotation.y=0;splash.scale.setScalar((1-p*.75)*(.85+.2*clamp((t-IMP)/1.5,0,1)));
+ sm.opacity=.85*(1-p*.8);
+ 
+ const sdt=dt*(t<IMP+2?.4:.6)*(1+Math.abs(scrollVel)*.012 + burstMotion*2.4);
+ for(let i=0;i<ip.count;i++){const j=i*3;let s=0;
+  if(t>IMP){
+    D[i]+=sdt;V[j+1]-=3.6*sdt;P[j]+=V[j]*sdt;P[j+1]+=V[j+1]*sdt;P[j+2]+=V[j+2]*sdt;
+    s=S[i]*Math.min(D[i]*4,1)*Math.max(1-D[i]/3.5,0);
+    if(D[i]>3.5||P[j+1]<-1.8)spawn(i,0);
+  }
+  dm.position.set(P[j],P[j+1],P[j+2]);
+  dm.lookAt(P[j]+V[j],P[j+1]+V[j+1],P[j+2]+V[j+2]);
+  dm.scale.set(s,s,s*(1+Math.hypot(V[j],V[j+1],V[j+2])*.3));
+  dm.updateMatrix();
+  ip.setMatrixAt(i,dm.matrix);
+ }
+ ip.instanceMatrix.needsUpdate=true;
+ 
+ crownMesh.scale.setScalar(1+.08*Math.sin(t*2.5));
+ cutL.position.set(rigBaseX,(mob?1.6:0)+.3,2);cutL.intensity=3+shake*10;
+ mL.position.set(smx*7,-smy*5,4.5);mL.color.copy(lin).lerp(white,.5);
+ const z=(mob?12:9)*(1+(1-dolly)*.7);
+ cam.position.set(Math.sin(t*.12)*.4+smx*.35,(mob?.8:.2)-smy*.2,z);
+ cam.lookAt(0,mob?.8:0,0);
+ R.render(scene,cam)})(last);
+}catch(err){console.warn('3D unavailable',err)}
+</script>
+<script>
+/* The 3D Journey Experience (5 Chapters: Orchard loading crew, Highway transit, Cold-press extraction, Multi-lane convertible canning line, Chilled cold storage) */
+(function(){
+const $=s=>document.querySelector(s),jr=$('#jr'),TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const rgb=(h,f,a)=>{const n=parseInt((h||'#f2a81d').slice(1),16)||0;return'rgba('+[n>>16,n>>8&255,n&255].map(v=>Math.min(255,Math.round(v*f))).join(',')+','+(a==null?1:a)+')'};
+if(!window.THREE){document.querySelectorAll('a[href="#journey"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();toast('The 3D engine could not load. Check your connection and refresh.')}));return}
+const CH=[
+['Harvest & Field Loading','Hand-picked at dawn in Ratnagiri orchards. Field crews sort and load fresh crates straight into cold transit.'],
+['Highway Cold-Chain Express','Sealed inside our -4°C insulated refrigerated hauler, cruising direct to the press in under 3 hours.'],
+['Cold-Pressed, Never Cooked','Fresh fruit enters the sanitary hydraulic press. Raw living nectar flows without heat or added water.'],
+['Convertible Multi-Lane Canning','Tri-lane convertible conveyors supply fresh cans. Automated rotary nozzles fill and hermetically seam each can.'],
+['Chilled Storage & Dispatch','Stacked in high-bay pallet racking under 4°C chilled vapor until express courier dispatch to your doorstep.']
+];
+const DUR=9,CF=[
+{bg:0xf1c88c,f:.011,h:.95,s:0xffe0ad,si:2.8,sp:[-22,17,-20],pl:0},
+{bg:0xe69556,f:.012,h:.8,s:0xffc27a,si:2.4,sp:[-24,9,-18],pl:0},
+{bg:0x1b1e24,f:.012,h:.6,s:0xffffff,si:.4,sp:[0,20,0],pl:1.6},
+{bg:0x14181f,f:.011,h:.55,s:0xffffff,si:.35,sp:[0,20,0],pl:1.7},
+{bg:0x0c1a26,f:.016,h:.45,s:0xbfe3ff,si:.35,sp:[0,20,0],pl:1.4}
+];
+let R,sc,cam,sky,G=[],UP=[],CM=[],FM=[],built=false,on=false,play=true,T=0,cur=-1,last=0,hemi,sun,pl1,pl2,dots=[];
+const col=()=>new THREE.Color(F[sel].c).convertSRGBToLinear();
+const mat=(c,m,r)=>new THREE.MeshStandardMaterial({color:c,metalness:m||0,roughness:r==null?.6:r});
+const fmat=()=>{const m=new THREE.MeshPhysicalMaterial({color:0xffffff,roughness:.32,clearcoat:.8,clearcoatRoughness:.2});FM.push(m);return m};
+const mesh=(g,m,x,y,z,p)=>{const o=new THREE.Mesh(g,m);o.position.set(x||0,y||0,z||0);o.castShadow=o.receiveShadow=true;if(p)p.add(o);return o};
+const inst=(g,m,n,p)=>{const o=new THREE.InstancedMesh(g,m,n);o.castShadow=o.receiveShadow=true;o.frustumCulled=false;p.add(o);return o};
+const D=new THREE.Object3D(),put=(o,i,x,y,z,sx,sy,sz,ry)=>{D.position.set(x,y,z);D.scale.set(sx==null?1:sx,sy==null?1:sy,sz==null?1:sz);D.rotation.set(0,ry||0,0);D.updateMatrix();o.setMatrixAt(i,D.matrix)};
+const B=(w,h,d)=>new THREE.BoxGeometry(w,h,d),Cy=(a,b,h,s)=>new THREE.CylinderGeometry(a,b,h,s||24);
+let dotT;function dust(g,n,w,h,d,c){const a=new Float32Array(n*3);for(let i=0;i<n;i++){a[i*3]=(Math.random()-.5)*w;a[i*3+1]=Math.random()*h;a[i*3+2]=(Math.random()-.5)*d}
+ const ge=new THREE.BufferGeometry();ge.setAttribute('position',new THREE.BufferAttribute(a,3));if(!dotT){const k=document.createElement('canvas');k.width=k.height=32;const x=k.getContext('2d'),r=x.createRadialGradient(16,16,0,16,16,16);r.addColorStop(0,'#fff');r.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=r;x.fillRect(0,0,32,32);dotT=new THREE.CanvasTexture(k)}
+ const p=new THREE.Points(ge,new THREE.PointsMaterial({size:.09,map:dotT,color:c,transparent:true,opacity:.55,depthWrite:false,blending:THREE.AdditiveBlending}));p.frustumCulled=false;g.add(p);return p}
+const SLG="NATURE'S RAW PULSE. SEALED PURE.",H=(x,z)=>.22*Math.sin(x*.09+1)*Math.cos(z*.06)+.15*Math.sin(z*.13+x*.04);
+function tex(w,h,fn){const c=document.createElement('canvas');c.width=w;c.height=h;fn(c.getContext('2d'),w,h);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;t.wrapS=t.wrapT=THREE.RepeatWrapping;return t}
+const BTC={};function brandTex(bg,fg,w,h){const ky=bg+'|'+fg+'|'+Math.round(w*10/h);return BTC[ky]||(BTC[ky]=brandTex0(bg,fg,w,h))}function brandTex0(bg,fg,w,h){const W=1024,Hh=Math.max(64,Math.round(W*h/w));return tex(W,Hh,g=>{if(bg){g.fillStyle=bg;g.fillRect(0,0,W,Hh)}g.fillStyle=fg;g.textAlign='center';
+ if(W/Hh>6){g.font=(Hh*.55)+'px Anton,Impact,sans-serif';g.fillText('SIPITO  ·  '+SLG,W/2,Hh*.72)}else{g.font=(Hh*.5)+'px Anton,Impact,sans-serif';g.fillText('SIPITO',W/2,Hh*.6);g.font='700 '+(Hh*.09)+'px "Space Grotesk",sans-serif';g.fillText(SLG,W/2,Hh*.8)}})}
+function sign(g,w,h,x,y,z,ry,bg,fg){const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshStandardMaterial({map:brandTex(bg,fg,w,h),transparent:!bg,roughness:.5,metalness:.1,polygonOffset:true,polygonOffsetFactor:-1}));m.position.set(x,y,z);m.rotation.y=ry||0;m.receiveShadow=true;g.add(m);return m}
+
+/* Realistic Printed Can Label for Factory Canning Lines */
+function canPrintLabelTex(flavorName, flavorColor){
+ return tex(512,256,(g,W,Hh)=>{
+  const c=flavorColor||'#f2a81d',nm=flavorName||'ALPHONSO MANGO';
+  const bg=g.createLinearGradient(0,0,W,0);bg.addColorStop(0,'#d5d9df');bg.addColorStop(.15,'#ffffff');bg.addColorStop(.85,'#f0f2f5');bg.addColorStop(1,'#c8ccd4');
+  g.fillStyle=bg;g.fillRect(0,0,W,Hh);
+  g.fillStyle=rgb(c,.9);g.beginPath();g.moveTo(0,Hh*.65);g.quadraticCurveTo(W*.5,Hh*.5,W,Hh*.65);g.lineTo(W,Hh);g.lineTo(0,Hh);g.closePath();g.fill();
+  g.fillStyle='#12141a';g.textAlign='center';g.font='900 68px Anton,Impact,sans-serif';g.fillText('SIPITO',W/2,75);
+  g.fillStyle='#333742';g.font='700 15px "Space Grotesk",sans-serif';g.fillText('100% COLD-PRESSED NECTAR',W/2,102);
+  g.fillStyle='#ffffff';g.font='900 24px Anton,Impact,sans-serif';g.fillText(nm.toUpperCase(),W/2,195);
+  g.font='700 11px "Space Grotesk",sans-serif';g.fillText('330 ML · ZERO ADDED SUGAR · RAW',W/2,224);
+ });
+}
+
+function truckSideTex(col){return tex(1024,512,(g,W,Hh)=>{
+ const c=col||'#f2a81d';
+ const bg=g.createLinearGradient(0,0,0,Hh);bg.addColorStop(0,'#f8fafc');bg.addColorStop(.5,'#ffffff');bg.addColorStop(1,'#e2e8f0');
+ g.fillStyle=bg;g.fillRect(0,0,W,Hh);
+ g.fillStyle='rgba(0,0,0,.04)';for(let y=60;y<Hh-60;y+=75)g.fillRect(0,y,W,2);
+ [10,Hh-24].forEach(yPos=>{for(let x=0;x<W;x+=32){g.fillStyle=(Math.floor(x/32)%2===0)?'#facc15':'#ffffff';g.fillRect(x,yPos,32,14);g.fillStyle='rgba(0,0,0,.15)';g.strokeRect(x,yPos,32,14)}});
+ const wg=g.createLinearGradient(0,320,0,Hh-30);wg.addColorStop(0,rgb(c,1.1,.95));wg.addColorStop(.5,rgb(c,.85,.95));wg.addColorStop(1,rgb(c,.45,1));
+ g.fillStyle=wg;g.beginPath();g.moveTo(0,Hh-30);for(let x=0;x<=W;x+=10){const wy=330+Math.sin(x/65)*16+Math.sin(x/30)*6;g.lineTo(x,wy)}g.lineTo(W,Hh-30);g.closePath();g.fill();
+ g.strokeStyle='rgba(255,255,255,.7)';g.lineWidth=3;g.beginPath();for(let x=0;x<=W;x+=10){const wy=330+Math.sin(x/65)*16+Math.sin(x/30)*6;x===0?g.moveTo(x,wy):g.lineTo(x,wy)}g.stroke();
+ g.textAlign='left';g.fillStyle='#141113';g.font='900 135px Anton,Impact,sans-serif';g.fillText('SIPITO',55,175);
+ g.fillStyle='#32363e';g.font='700 24px "Space Grotesk",sans-serif';g.fillText('100% COLD-PRESSED INDIAN SUPERFRUIT NECTAR',58,218);
+ g.fillStyle='#646c79';g.font='500 19px "Space Grotesk",sans-serif';g.fillText('SINGLE-ORIGIN ORCHARDS » FARM TO CAN UNDER 24H',58,252);
+ g.fillStyle='#ffffff';g.font='900 48px Anton,Impact,sans-serif';g.fillText(SLG,58,410);
+ g.fillStyle='#15171c';g.fillRect(680,80,290,160);
+ g.strokeStyle='#2d3340';g.lineWidth=2.5;g.strokeRect(680,80,290,160);
+ g.fillStyle='#10b981';g.beginPath();g.arc(710,115,8,0,TAU);g.fill();
+ g.fillStyle='#34d399';g.font='700 16px "Space Grotesk",monospace';g.fillText('CRYO COLD CHAIN ACTIVE',730,121);
+ g.fillStyle='#10b981';g.font='900 44px Anton,Impact,monospace';g.fillText('-4.0° C',710,175);
+ g.fillStyle='#94a3b8';g.font='500 15px "Space Grotesk",sans-serif';g.fillText('THERMO KING · OPTICOLD 300',710,210);
+ g.fillStyle='#475569';g.font='700 14px "Space Grotesk",sans-serif';g.fillText('ALL INDIA PERMIT · SPEED GOV 60 KM/H · MH-12',58,465);
+})}
+function truckRearTex(){return tex(512,512,(g,W,Hh)=>{
+ g.fillStyle='#f3f4f6';g.fillRect(0,0,W,Hh);
+ g.fillStyle='#1f242d';g.fillRect(W/2-4,0,8,Hh);
+ g.strokeStyle='#cbd5e1';g.lineWidth=3;g.strokeRect(6,6,W-12,Hh-12);
+ const chY=Hh-130,chH=100;g.save();g.beginPath();g.rect(0,chY,W,chH);g.clip();const stW=40;
+ for(let x=-Hh;x<W+Hh;x+=stW*2){g.fillStyle='#dc2626';g.beginPath();g.moveTo(x,chY+chH);g.lineTo(x+chH,chY);g.lineTo(x+chH+stW,chY);g.lineTo(x+stW,chY+chH);g.fill();g.fillStyle='#facc15';g.beginPath();g.moveTo(x+stW,chY+chH);g.lineTo(x+chH+stW,chY);g.lineTo(x+chH+stW*2,chY);g.lineTo(x+stW*2,chY+chH);g.fill()}
+ g.restore();
+ g.fillStyle='#111827';g.textAlign='center';g.font='900 68px Anton,Impact,sans-serif';g.fillText('SIPITO',W/2,95);
+ g.font='700 16px "Space Grotesk",sans-serif';g.fillText('CRYO COLD-CHAIN CARRIER',W/2,130);
+ g.fillStyle='#b91c1c';g.font='700 15px "Space Grotesk",sans-serif';g.fillText('KEEP SAFE DISTANCE · REFRIGERATED',W/2,180);
+ g.fillStyle='#ffffff';g.fillRect(W/2-80,215,160,42);g.strokeStyle='#000000';g.lineWidth=2;g.strokeRect(W/2-80,215,160,42);
+ g.fillStyle='#000000';g.font='700 24px "Space Grotesk",sans-serif';g.fillText('MH 12 SP 2026',W/2,246);
+})}
+function bbTex1(col){return tex(1024,384,(g,W,Hh)=>{
+ const c=col||'#f2a81d';
+ const bg=g.createRadialGradient(W*.72,Hh*.48,40,W*.72,Hh*.48,W*.7);
+ bg.addColorStop(0,rgb(c,.95,1));bg.addColorStop(.35,rgb(c,.45,1));bg.addColorStop(.85,'#0b080c');bg.addColorStop(1,'#050406');
+ g.fillStyle=bg;g.fillRect(0,0,W,Hh);
+ g.fillStyle='rgba(255,255,255,.04)';for(let x=W/4;x<W;x+=W/4)g.fillRect(x-1,0,2,Hh);
+ g.fillStyle=c;g.fillRect(50,32,420,36);
+ g.fillStyle='#0d0b0f';g.font='700 15px "Space Grotesk",sans-serif';g.textAlign='left';g.fillText('100% RAW HERITAGE FRUIT · ZERO ADDED SUGAR',68,56);
+ g.fillStyle='#ffffff';g.font='900 96px Anton,Impact,sans-serif';g.fillText('COLD PRESSED.',50,148);
+ g.fillStyle=c;g.fillText('NEVER COOKED.',50,232);
+ g.fillStyle='#e2e8f0';g.font='500 22px "Space Grotesk",sans-serif';g.fillText('Cold-pressed under 4°C at source in Ratnagiri.',52,280);g.fillText('Direct from partner orchards to can in 24 hours.',52,312);
+ const cx=W*.76,cy=Hh*.52;
+ const jb=g.createRadialGradient(cx,cy,30,cx,cy,180);jb.addColorStop(0,'rgba(255,255,255,.8)');jb.addColorStop(.4,rgb(c,1.2,.7));jb.addColorStop(1,'rgba(0,0,0,0)');
+ g.fillStyle=jb;g.beginPath();g.arc(cx,cy,180,0,TAU);g.fill();
+ g.save();g.translate(cx,cy);g.rotate(-.18);
+ const cg=g.createLinearGradient(-50,0,50,0);cg.addColorStop(0,'#d1d5db');cg.addColorStop(.2,'#ffffff');cg.addColorStop(.6,c);cg.addColorStop(1,'#9ca3af');
+ g.fillStyle=cg;g.fillRect(-50,-110,100,220);
+ g.fillStyle='#9ca3af';g.fillRect(-46,-118,92,8);g.fillRect(-46,110,92,8);
+ g.fillStyle='#111827';g.textAlign='center';g.font='900 36px Anton,Impact,sans-serif';g.fillText('SIPITO',0,0);
+ g.font='700 12px "Space Grotesk",sans-serif';g.fillText('RAW NECTAR',0,22);g.restore();
+ g.fillStyle='rgba(255,255,255,.4)';g.font='500 13px "Space Grotesk",monospace';g.textAlign='right';g.fillText('NATIONAL HIGHWAYS OUTDOOR · 1800-SIPITO',W-30,Hh-18);
+})}
+function bbTex2(){return tex(1024,384,(g,W,Hh)=>{
+ const bg=g.createLinearGradient(0,0,W,Hh);bg.addColorStop(0,'#0c0f14');bg.addColorStop(.5,'#161a22');bg.addColorStop(1,'#090b0e');
+ g.fillStyle=bg;g.fillRect(0,0,W,Hh);
+ g.fillStyle='rgba(255,255,255,.03)';for(let x=W/4;x<W;x+=W/4)g.fillRect(x-1,0,2,Hh);
+ g.textAlign='center';g.fillStyle='#ffffff';g.font='900 64px Anton,Impact,sans-serif';g.fillText('SIX FLAVOURS OF REAL INDIA',W/2,80);
+ g.fillStyle='#94a3b8';g.font='700 18px "Space Grotesk",sans-serif';g.fillText('RATNAGIRI · NAGPUR · ALLAHABAD · SOLAPUR · MYSORE',W/2,118);
+ const fls=[{n:'Alphonso',c:'#f2a81d'},{n:'Pink Guava',c:'#ee6b88'},{n:'Nagpur Orange',c:'#f28c1b'},{n:'Sugarcane',c:'#8cbf2f'},{n:'Pomegranate',c:'#d41f4d'},{n:'Coconut',c:'#7fb069'}];
+ const startX=100,stepX=(W-200)/5,circleY=220,r=42;
+ fls.forEach((fl,idx)=>{const cx=startX+idx*stepX;
+  const aura=g.createRadialGradient(cx,circleY,r*.4,cx,circleY,r*1.6);aura.addColorStop(0,rgb(fl.c,1,.4));aura.addColorStop(1,'rgba(0,0,0,0)');
+  g.fillStyle=aura;g.beginPath();g.arc(cx,circleY,r*1.6,0,TAU);g.fill();
+  g.fillStyle=fl.c;g.beginPath();g.arc(cx,circleY,r,0,TAU);g.fill();g.strokeStyle='#ffffff';g.lineWidth=3;g.stroke();
+  g.fillStyle='#ffffff';g.font='700 15px "Space Grotesk",sans-serif';g.fillText(fl.n,cx,circleY+r+30);
+ });
+ g.fillStyle='#f2a81d';g.font='700 22px Anton,Impact,sans-serif';g.fillText('AVAILABLE AT LEADING STORES ACROSS INDIA · SIP IT FRESH',W/2,350);
+})}
+function orchardArchTex(){return tex(1024,256,(g,W,Hh)=>{
+ g.fillStyle='#362417';g.fillRect(0,0,W,Hh);
+ g.fillStyle='rgba(20,12,6,.4)';for(let y=0;y<Hh;y+=32)g.fillRect(0,y,W,3);
+ g.strokeStyle='#b88a44';g.lineWidth=6;g.strokeRect(12,12,W-24,Hh-24);
+ g.fillStyle='#f5d061';g.textAlign='center';
+ g.font='900 68px Anton,Impact,sans-serif';g.fillText('RATNAGIRI ORCHARD ESTATE',W/2,105);
+ g.fillStyle='#ffffff';g.font='700 24px "Space Grotesk",sans-serif';g.fillText('SIPITO ORGANIC SOURCING · BLOCK 01',W/2,155);
+ g.fillStyle='#b88a44';g.font='700 16px "Space Grotesk",sans-serif';g.fillText('COLD-PRESSED RATNAGIRI ALPHONSO & FRESH HARVEST',W/2,195);
+})}
+function createHighwayBillboard(w,h,texMap,x,y,z,ry,gTarget){
+ const bb=new THREE.Group();bb.position.set(x,y,z);bb.rotation.y=ry||0;gTarget.add(bb);
+ const steelMat=mat(0x4f545c,.75,.38),darkFrame=mat(0x181a1f,.3,.7),concreteMat=mat(0x8c9096,.1,.95),lampGlow=new THREE.MeshBasicMaterial({color:0xfff3d6});
+ mesh(Cy(1.15,1.25,.9,16),concreteMat,0,.45,0,bb);
+ const ph=y;mesh(Cy(.58,.65,ph,24),steelMat,0,ph/2,0,bb);
+ for(let a=0;a<4;a++){const ang=a/4*TAU;const gusset=mesh(B(.08,1.2,.6),steelMat,Math.cos(ang)*.7,.8,Math.sin(ang)*.7,bb);gusset.rotation.y=ang}
+ mesh(B(w+.4,.65,.65),steelMat,0,ph,0,bb);
+ const nBays=6,bW=w/nBays;
+ for(let i=0;i<=nBays;i++){const bx=-w/2+i*bW;mesh(B(.18,h,.18),steelMat,bx,ph,-.4,bb);if(i<nBays){const d1=mesh(B(.08,Math.hypot(bW,h),.08),steelMat,bx+bW/2,ph,-.45,bb);d1.rotation.z=Math.atan2(h,bW);const d2=mesh(B(.08,Math.hypot(bW,h),.08),steelMat,bx+bW/2,ph,-.45,bb);d2.rotation.z=-Math.atan2(h,bW)}}
+ mesh(B(w+.6,h+.6,.35),darkFrame,0,ph,0,bb);
+ const postM=new THREE.MeshStandardMaterial({map:texMap,roughness:.5,metalness:.1,polygonOffset:true,polygonOffsetFactor:-1});
+ mesh(new THREE.PlaneGeometry(w,h),postM,0,ph,.18,bb);
+ const cwY=ph-h/2-.25;
+ mesh(B(w+.8,.12,1.35),steelMat,0,cwY,.68,bb);
+ for(let rx=-w/2-.3;rx<=w/2+.35;rx+=2.2)mesh(Cy(.025,.025,1.1,8),steelMat,rx,cwY+.55,1.3,bb);
+ mesh(Cy(.03,.03,w+.8,8),steelMat,0,cwY+1.1,1.3,bb).rotation.z=Math.PI/2;
+ mesh(Cy(.025,.025,w+.8,8),steelMat,0,cwY+.55,1.3,bb).rotation.z=Math.PI/2;
+ const nL=4,lSp=(w*.75)/(nL-1),topY=ph+h/2+.2;
+ for(let l=0;l<nL;l++){const lx=-w*.375+l*lSp;mesh(B(.06,.06,1.8),steelMat,lx,topY+.15,.9,bb);
+  const flHead=mesh(B(.42,.22,.32),darkFrame,lx,topY-.05,1.75,bb);flHead.rotation.x=-.45;
+  const lens=mesh(B(.38,.02,.26),lampGlow,lx,topY-.1,1.75,bb);lens.rotation.x=-.45}
+ const bLight=new THREE.PointLight(0xffedd5,3.2,28);bLight.position.set(0,topY-.2,3.5);bb.add(bLight);
+ return bb;
+}
+function buildRealisticTruck(g,whList){
+ const tk=new THREE.Group();g.add(tk);
+ const cabPaint=new THREE.MeshPhysicalMaterial({color:0xb72323,metalness:.35,roughness:.22,clearcoat:1,clearcoatRoughness:.08});
+ const darkChassis=mat(0x181a1d,.5,.6),chromeMat=new THREE.MeshStandardMaterial({color:0xebedf0,metalness:.95,roughness:.15}),blackTrim=mat(0x121417,.2,.7);
+ const glassMat=new THREE.MeshPhysicalMaterial({color:0x141820,roughness:.04,metalness:.7,clearcoat:1,transparent:true,opacity:.82});
+ const mirrorFace=new THREE.MeshStandardMaterial({color:0xffffff,metalness:1,roughness:.05}),reeferWhite=new THREE.MeshStandardMaterial({color:0xf4f6f8,metalness:.1,roughness:.35});
+ const tireMat=mat(0x191a1d,.05,.88),headlampMat=new THREE.MeshBasicMaterial({color:0xfff6db}),amberLed=new THREE.MeshBasicMaterial({color:0xf59e0b}),redLed=new THREE.MeshBasicMaterial({color:0xef4444}),greenLed=new THREE.MeshBasicMaterial({color:0x10b981});
+
+ // 1. Chassis Frame Rails (from x = -5.0 to x = 3.5)
+ [-0.48,0.48].forEach(z=>mesh(B(8.5,.26,.12),darkChassis,-.75,.85,z,tk));
+ [-4.6,-3.3,-2.0,-0.7,0.8,2.2,3.4].forEach(x=>mesh(B(.12,.18,.96),darkChassis,x,.85,0,tk));
+
+ // Front Bumper & Lower Grille
+ mesh(B(.38,.46,2.45),darkChassis,3.48,.72,0,tk);
+ [-0.88,0.88].forEach(z=>{const f=mesh(Cy(.08,.08,.06,16),headlampMat,3.68,.65,z,tk);f.rotation.z=Math.PI/2});
+ mesh(B(.02,.14,.52),new THREE.MeshStandardMaterial({color:0xffffff,roughness:.5}),3.68,.68,0,tk);
+
+ // Rear Under-Ride Bumper
+ mesh(B(.12,.16,2.45),darkChassis,-5.1,.62,0,tk);
+ [-1.25,1.25].forEach(z=>mesh(B(.04,.48,.45),blackTrim,-4.7,.45,z,tk));
+ [-0.95,0.95].forEach(z=>{mesh(B(.06,.18,.32),redLed,-5.16,.68,z,tk);mesh(B(.06,.08,.1),amberLed,-5.16,.68,z+(z>0?.2:-.2),tk)});
+
+ // Fuel Tank & Battery Box
+ const fuelTank=mesh(Cy(.35,.35,1.6,24),chromeMat,.2,.76,-1.18,tk);fuelTank.rotation.x=Math.PI/2;
+ [-0.55,0.55].forEach(dx=>mesh(B(.06,.75,.75),darkChassis,.2+dx,.76,-1.18,tk));
+ mesh(B(.8,.45,.65),darkChassis,.3,.76,1.18,tk);
+ [-0.15,0.15].forEach(dz=>{const at=mesh(Cy(.12,.12,1.1,16),chromeMat,-.7,.78,1.18+dz,tk);at.rotation.x=Math.PI/2});
+
+ // Wheel Builder
+ function makeWheel(x,y,z,isDual){
+  const wGroup=new THREE.Group();wGroup.position.set(x,y,z);tk.add(wGroup);whList.push(wGroup);
+  const offs=isDual?[-.14,.14]:[0];
+  offs.forEach(dz=>{
+   const tire=mesh(Cy(.55,.55,.26,28),tireMat,0,0,dz,wGroup);tire.rotation.x=Math.PI/2;
+   const rim=mesh(Cy(.36,.36,.27,24),chromeMat,0,0,dz,wGroup);rim.rotation.x=Math.PI/2;
+   const hub=mesh(Cy(.13,.13,.29,16),darkChassis,0,0,dz,wGroup);hub.rotation.x=Math.PI/2;
+   const cap=mesh(Cy(.06,.06,.31,12),redLed,0,0,dz,wGroup);cap.rotation.x=Math.PI/2;
+   for(let b=0;b<8;b++){const ang=b/8*TAU,bx=Math.cos(ang)*.22,by=Math.sin(ang)*.22;const bolt=mesh(Cy(.016,.016,.29,6),chromeMat,bx,by,dz,wGroup);bolt.rotation.x=Math.PI/2}
+  });return wGroup;
+ }
+ makeWheel(2.4,.55,-1.22,false);makeWheel(2.4,.55,1.22,false);
+ makeWheel(-2.6,.55,-1.22,true);makeWheel(-2.6,.55,1.22,true);
+ makeWheel(-4.0,.55,-1.22,true);makeWheel(-4.0,.55,1.22,true);
+
+ // 2. Cab Section (Cleanly positioned at x = 2.4, length = 2.1, width = 2.3)
+ mesh(B(2.1,2.15,2.3),cabPaint,2.4,2.02,0,tk);
+ [-1.22,1.22].forEach(z=>{mesh(B(.8,.1,.28),blackTrim,2.4,.65,z,tk);mesh(B(.8,.1,.28),blackTrim,2.4,.45,z,tk)});
+
+ // Windshield & Cab Visor
+ const ws=mesh(B(.06,.92,2.12),glassMat,3.46,2.42,0,tk);ws.rotation.z=-.12;
+ mesh(B(.04,.98,2.18),blackTrim,3.44,2.42,0,tk).rotation.z=-.12;
+ [-0.45,0.45].forEach(z=>{const wp=mesh(B(.02,.48,.02),blackTrim,3.5,2.22,z,tk);wp.rotation.z=.4});
+ const visor=mesh(B(.3,.1,2.24),blackTrim,3.48,2.94,0,tk);visor.rotation.z=.25;
+
+ // Front Grille & Upper Headlamps
+ mesh(B(.08,.82,1.42),blackTrim,3.48,1.42,0,tk);
+ for(let s=-0.26;s<=0.26;s+=0.16)mesh(B(.09,.04,1.35),chromeMat,3.49,1.42+s,0,tk);
+ const emb=mesh(Cy(.07,.07,.1,16),chromeMat,3.5,1.42,0,tk);emb.rotation.z=Math.PI/2;
+ [-0.88,0.88].forEach(z=>{
+  mesh(B(.12,.38,.36),darkChassis,3.48,1.42,z,tk);
+  [-0.08,0.08].forEach(dz=>{const lp=mesh(Cy(.075,.075,.06,16),headlampMat,3.54,1.42,z+dz,tk);lp.rotation.z=Math.PI/2});
+  mesh(B(.04,.08,.32),amberLed,3.54,1.2,z,tk);
+ });
+
+ // Side Cab Windows & Mirrors
+ [-1.16,1.16].forEach(z=>{
+  mesh(B(1.0,.68,.04),glassMat,2.4,2.42,z,tk);
+  mesh(B(1.06,.74,.02),blackTrim,2.4,2.42,z,tk);
+  mesh(B(.16,.04,.04),chromeMat,1.85,1.85,z+(z>0?.02:-.02),tk);
+ });
+ [-1.34,1.34].forEach(z=>{
+  mesh(B(.32,.03,.26),chromeMat,3.15,2.7,z*.95,tk);mesh(B(.32,.03,.26),chromeMat,3.15,2.15,z*.95,tk);
+  mesh(B(.12,.58,.22),blackTrim,3.22,2.42,z,tk);
+  mesh(B(.02,.52,.18),mirrorFace,3.22,2.42,z+(z>0?-.1:.1),tk);
+ });
+
+ // Cab Roof Marker Amber Lights
+ [-0.6,-0.3,0,0.3,0.6].forEach(z=>mesh(B(.08,.05,.06),amberLed,3.4,3.1,z,tk));
+
+ // 3. Refrigerated Trailer Body (Positioned at x = -1.95, Length = 6.2, Height = 2.8, Width = 2.45)
+ mesh(B(6.2,2.8,2.45),reeferWhite,-1.95,2.45,0,tk);
+ const sTex=truckSideTex(F[sel].c),sMat=new THREE.MeshStandardMaterial({map:sTex,roughness:.35,metalness:.05});
+ mesh(B(6.22,.12,2.48),fmat(),-1.95,1.22,0,tk);
+ mesh(new THREE.PlaneGeometry(6.18,2.76),sMat,-1.95,2.45,1.232,tk);
+ const pR=mesh(new THREE.PlaneGeometry(6.18,2.76),sMat,-1.95,2.45,-1.232,tk);pR.rotation.y=Math.PI;
+
+ // Trailer Rear Doors & Locking Rods
+ const rTex=truckRearTex(),rMat=new THREE.MeshStandardMaterial({map:rTex,roughness:.4,metalness:.1});
+ const rDoor=mesh(new THREE.PlaneGeometry(2.42,2.76),rMat,-5.06,2.45,0,tk);rDoor.rotation.y=-Math.PI/2;
+ [-0.45,0.45].forEach(z=>{mesh(Cy(.025,.025,2.68,12),chromeMat,-5.08,2.45,z,tk);mesh(B(.12,.08,.06),darkChassis,-5.08,2.0,z,tk)});
+ [1.06,3.84].forEach(y=>[-1.23,1.23].forEach(z=>mesh(B(6.24,.08,.08),chromeMat,-1.95,y,z,tk)));
+ [-5.04,1.14].forEach(x=>[-1.23,1.23].forEach(z=>mesh(B(.08,2.82,.08),chromeMat,x,2.45,z,tk)));
+
+ // 4. Thermo King Rooftop / Front Reefer Unit
+ mesh(B(.45,.95,1.8),reeferWhite,1.25,3.2,0,tk);
+ mesh(B(.46,.45,1.5),blackTrim,1.26,3.3,0,tk);
+ for(let ly=-0.14;ly<=0.14;ly+=0.07)mesh(B(.47,.025,1.42),darkChassis,1.26,3.3+ly,0,tk);
+ mesh(B(.46,.12,.3),greenLed,1.26,2.92,.45,tk);
+
+ // Headlight Beam Light
+ const hp=new THREE.PointLight(0xffecd1,2.8,28);hp.position.set(4.8,1.4,0);tk.add(hp);
+ return {tk,wh:whList};
+}
+
+/* 3D Animated Human Figure for Orchard Loading Crew */
+function createWorker(parent, shirtColor, pantsColor, hatColor){
+ const w=new THREE.Group();
+ parent.add(w);
+ const skin=mat(0xc68b59,0,.8),shirt=mat(shirtColor||0x2b6cb0,.1,.7),pants=mat(pantsColor||0x3d434d,.1,.8),boots=mat(0x1a1512,.2,.9),hat=mat(hatColor||0xd4a359,.05,.9);
+ // Torso
+ const torso=mesh(B(.42,.62,.26),shirt,0,.95,0,w);
+ // Head & Hat
+ mesh(new THREE.SphereGeometry(.14,12,12),skin,0,1.4,0,w);
+ const hatBrim=mesh(Cy(.26,.26,.02,16),hat,0,1.48,0,w);
+ mesh(Cy(.15,.15,.12,16),hat,0,1.54,0,w);
+ // Arms
+ const lArm=new THREE.Group();lArm.position.set(-.26,1.2,0);w.add(lArm);mesh(Cy(.06,.06,.5,10),shirt,0,-.25,0,lArm);mesh(new THREE.SphereGeometry(.06,8,8),skin,0,-.5,0,lArm);
+ const rArm=new THREE.Group();rArm.position.set(.26,1.2,0);w.add(rArm);mesh(Cy(.06,.06,.5,10),shirt,0,-.25,0,rArm);mesh(new THREE.SphereGeometry(.06,8,8),skin,0,-.5,0,rArm);
+ // Legs
+ const lLeg=new THREE.Group();lLeg.position.set(-.12,.65,0);w.add(lLeg);mesh(Cy(.08,.07,.65,10),pants,0,-.32,0,lLeg);mesh(B(.11,.1,.22),boots,0,-.68,.04,lLeg);
+ const rLeg=new THREE.Group();rLeg.position.set(.12,.65,0);w.add(rLeg);mesh(Cy(.08,.07,.65,10),pants,0,-.32,0,rLeg);mesh(B(.11,.1,.22),boots,0,-.68,.04,rLeg);
+ return {group:w,lArm,rArm,lLeg,rLeg,torso};
+}
+
+const leafT=tex(512,512,g=>{g.translate(256,256);for(let i=0;i<22;i++){const a=i/22*TAU+Math.random()*.4,l=130+Math.random()*80,w=l*(.2+Math.random()*.06),o=12+Math.random()*32,lit=Math.random();g.save();g.rotate(a);g.translate(o,0);
+ const q=g.createLinearGradient(0,0,l,0);q.addColorStop(0,'hsl('+(105+Math.random()*18)+',58%,'+(14+lit*8)+'%)');q.addColorStop(.6,'hsl('+(98+Math.random()*20)+',55%,'+(24+lit*12)+'%)');q.addColorStop(1,'hsl('+(85+Math.random()*20)+',55%,'+(34+lit*12)+'%)');
+ g.fillStyle=q;g.beginPath();g.moveTo(0,0);g.bezierCurveTo(l*.2,-w*1.2,l*.7,-w,l,0);g.bezierCurveTo(l*.7,w,l*.2,w*1.2,0,0);g.fill();
+ g.strokeStyle='rgba(230,245,160,.45)';g.lineWidth=2;g.beginPath();g.moveTo(0,0);g.lineTo(l*.95,0);g.stroke();
+ g.strokeStyle='rgba(0,0,0,.18)';g.lineWidth=1;for(let v=1;v<7;v++){const x=l*v/8;g.beginPath();g.moveTo(x,0);g.lineTo(x+l*.08,-w*.8);g.moveTo(x,0);g.lineTo(x+l*.08,w*.8);g.stroke()}
+ g.restore()}});
+const grassT=tex(128,128,g=>{for(let i=0;i<46;i++){const x=Math.random()*128,h=50+Math.random()*70;g.strokeStyle='hsl('+(65+Math.random()*35)+',55%,'+(32+Math.random()*20)+'%)';g.lineWidth=2.2;g.beginPath();g.moveTo(x,128);g.quadraticCurveTo(x+(Math.random()-.5)*20,128-h*.6,x+(Math.random()-.5)*34,128-h);g.stroke()}});
+const gT=tex(256,256,g=>{g.fillStyle='#4f8a34';g.fillRect(0,0,256,256);for(let i=0;i<2600;i++){g.fillStyle='hsla('+(70+Math.random()*50)+',50%,'+(22+Math.random()*26)+'%,.55)';g.fillRect(Math.random()*256,Math.random()*256,1+Math.random()*3,1+Math.random()*3)}});
+const crateT=tex(256,256,g=>{g.fillStyle='#b98a50';g.fillRect(0,0,256,256);for(let i=0;i<5;i++){g.fillStyle='rgba(60,35,10,.35)';g.fillRect(0,i*51,256,3)}g.fillStyle='rgba(30,15,5,.8)';g.textAlign='center';g.font='96px Anton,Impact,sans-serif';g.fillText('SIPITO',128,135);g.font='700 17px "Space Grotesk",sans-serif';g.fillText(SLG,128,170)});
+const canT=tex(512,262,(g,W,Hh)=>{g.fillStyle='#fff';g.fillRect(0,0,W,Hh);g.fillStyle='#1a1410';g.textAlign='center';g.font='150px Anton,Impact,sans-serif';g.fillText('SIPITO',W/2,Hh*.58);g.font='700 22px "Space Grotesk",sans-serif';g.fillText(SLG,W/2,Hh*.78)});canT.repeat.set(2,1);
+const skyT=[0,1].map(k=>tex(1024,512,(g,W,Hh)=>{const q=g.createLinearGradient(0,0,0,Hh);(k?[['#4a5f9a',0],['#c9785e',.3],['#f6b777',.5],['#e69556',1]]:[['#3f78bd',0],['#7fb0e2',.3],['#f1d3a0',.5],['#f1c88c',1]]).forEach(a=>q.addColorStop(a[1],a[0]));g.fillStyle=q;g.fillRect(0,0,W,Hh);
+ const sx=W*.88,sy=Hh*(k?.42:.34),r=g.createRadialGradient(sx,sy,0,sx,sy,Hh*.5);r.addColorStop(0,'rgba(255,248,220,1)');r.addColorStop(.06,'rgba(255,230,170,.9)');r.addColorStop(.3,'rgba(255,200,120,.35)');r.addColorStop(1,'rgba(255,200,120,0)');g.fillStyle=r;g.fillRect(0,0,W,Hh);
+ for(let i=0;i<60;i++){const x=Math.random()*W,y=Hh*(.16+Math.random()*.28),w=60+Math.random()*160,c=g.createRadialGradient(x,y,0,x,y,w);c.addColorStop(0,k?'rgba(255,210,170,.22)':'rgba(255,255,255,.3)');c.addColorStop(1,'rgba(255,255,255,0)');g.save();g.translate(x,y);g.scale(1,.28);g.translate(-x,-y);g.fillStyle=c;g.fillRect(x-w,y-w,2*w,2*w);g.restore()}}));
+const gmat=(rx,ry)=>{const t=gT.clone();t.needsUpdate=true;t.repeat.set(rx,ry);return new THREE.MeshStandardMaterial({map:t,roughness:1})};
+const putE=(o,i,x,y,z,sx,sy,sz,rx,ry,rz)=>{D.position.set(x,y,z);D.scale.set(sx,sy,sz);D.rotation.set(rx||0,ry||0,rz||0);D.updateMatrix();o.setMatrixAt(i,D.matrix)};
+const WU={value:0};
+function windify(m,h0,h1,amp){m.onBeforeCompile=s=>{s.uniforms.uTime=WU;s.vertexShader='uniform float uTime;\n'+s.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+#ifdef USE_INSTANCING
+vec3 ip=instanceMatrix[3].xyz;
+#else
+vec3 ip=vec3(0.);
+#endif
+float ph=ip.x*.35+ip.z*.27;
+float k=clamp((position.y-(${h0.toFixed(3)}))/${(h1-h0).toFixed(3)},0.,1.);
+float wv=sin(uTime*1.7+ph)*.6+sin(uTime*3.1+ph*1.9+position.x*2.)*.4+sin(uTime*.45+ip.z*.05)*.5;
+transformed.x+=wv*${amp.toFixed(3)}*k*k;
+transformed.z+=cos(uTime*1.3+ph*1.2)*${(amp*.6).toFixed(3)}*k*k;`)}}
+const SKYM=new THREE.ShaderMaterial({uniforms:{uT:{value:0},uMode:{value:0}},side:THREE.BackSide,depthWrite:false,vertexShader:'varying vec3 vD;void main(){vD=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:[
+'precision highp float;varying vec3 vD;uniform float uT,uMode;',
+'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}',
+'float fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<5;i++){s+=a*n(p);p=p*2.1+vec2(3.1,1.7);a*=.5;}return s;}',
+'void main(){vec3 d=normalize(vD);float y=max(d.y,0.);',
+'vec3 hz=mix(vec3(.96,.80,.58),vec3(.95,.62,.38),uMode),zn=mix(vec3(.22,.45,.80),vec3(.26,.32,.62),uMode);',
+'vec3 col=mix(hz,zn,pow(y,.55));',
+'vec3 sd=normalize(vec3(-.64,mix(.4,.22,uMode),-.66));float sdot=max(dot(d,sd),0.);',
+'col+=vec3(1.,.8,.5)*pow(sdot,7.)*.35+vec3(1.,.9,.7)*pow(sdot,180.)*.9+vec3(1.)*smoothstep(.9992,.9998,sdot)*3.;',
+'vec2 uv=d.xz/(y+.12)*.9;uv+=vec2(uT*.012,uT*.005);',
+'float cl=fbm(uv*1.2)*.7+fbm(uv*3.1+7.)*.3;float cov=smoothstep(.48,.78,cl)*smoothstep(0.,.18,y);',
+'vec3 cc=mix(vec3(.97,.97,.98),vec3(1.,.82,.62),uMode*.6+sdot*.4);cc*=.82+.25*fbm(uv*2.+3.);',
+'col=mix(col,cc,cov*.88);gl_FragColor=vec4(col,1.);}'].join('\n')});
+const canMat=()=>{const m=new THREE.MeshPhysicalMaterial({color:0xffffff,map:canT,metalness:.4,roughness:.32,clearcoat:.6});FM.push(m);return m};
+const barkT=tex(128,256,g=>{g.fillStyle='#5a4535';g.fillRect(0,0,128,256);for(let i=0;i<340;i++){const x=Math.random()*128,h=20+Math.random()*90,y=Math.random()*256;g.fillStyle='rgba('+(i%2?'30,20,12':'120,95,70')+','+(.18+Math.random()*.25)+')';g.fillRect(x,y,1+Math.random()*3,h)}});barkT.repeat.set(2,3);
+const barkM=new THREE.MeshStandardMaterial({map:barkT,roughness:.95}),leafM=new THREE.MeshStandardMaterial({map:leafT,alphaTest:.5,side:THREE.DoubleSide,roughness:.55}),LC=innerWidth<850?52:96,FCn=10;
+windify(leafM,-.75,.75,.22);
+const GN=innerWidth<850?4500:8000,GRM=new THREE.MeshStandardMaterial({map:grassT,alphaTest:.45,side:THREE.DoubleSide,roughness:1});windify(GRM,-.35,.35,.3);
+const trG=Cy(.12,.27,2.6,14),brG=Cy(.03,.1,1.7,7),lfG=new THREE.PlaneGeometry(1.5,1.5),frG=new THREE.SphereGeometry(.14,12,12);
+{const p=trG.attributes.position;for(let i=0;i<p.count;i++){const a=Math.atan2(p.getZ(i),p.getX(i)),n=1+.12*Math.sin(a*5+p.getY(i)*4);p.setX(i,p.getX(i)*n);p.setZ(i,p.getZ(i)*n)}trG.computeVertexNormals();brG.translate(0,.85,0);frG.scale(.92,1.28,.9)}
+function treeSet(g,pts,fm){const n=pts.length,tr=inst(trG,barkM,n,g),br=inst(brG,barkM,n*5,g),lf=inst(lfG,leafM,n*LC,g),fr=fm?inst(frG,fm,n*FCn,g):null;
+ const LB=[[0,0,0],[1.15,-.1,.45],[-1.05,0,.6],[.35,.55,-1.1],[-.45,.95,.15],[.55,-.3,1.05],[-.8,-.1,-.8]];
+ pts.forEach((p,i)=>{const x=p[0],z=p[1],s=p[2],y0=p[3]||0,cy=y0+3.1*s,ry=Math.random()*TAU,lean=(Math.random()-.5)*.08;
+  putE(tr,i,x,y0+1.2*s,z,s,s,s,lean,ry,lean);
+  for(let k=0;k<5;k++)putE(br,i*5+k,x,y0+2.0*s,z,s,s,s,(Math.random()-.5)*.3,k*1.26+Math.random()*.5,.55+Math.random()*.55);
+  for(let k=0;k<LC;k++){const L=LB[(Math.random()*LB.length)|0],a=Math.random()*TAU,e=Math.acos(2*Math.random()-1),r=Math.pow(Math.random(),.5),dx=Math.sin(e)*Math.cos(a),dy=Math.cos(e),dz=Math.sin(e)*Math.sin(a),q=(.8+Math.random()*.7)*s,c=.5+.5*r+.18*Math.max(dy,0)+(Math.random()-.5)*.12;
+   putE(lf,i*LC+k,x+(L[0]+dx*1.25*r)*s,cy+(L[1]+dy*.95*r)*s,z+(L[2]+dz*1.25*r)*s,q,q,q,Math.random()*TAU,Math.random()*TAU,Math.random()*TAU);lf.setColorAt(i*LC+k,new THREE.Color(c*.85,c,c*.7))}
+  if(fr)for(let k=0;k<FCn;k++){const L=LB[(Math.random()*LB.length)|0],a=Math.random()*TAU,r=.8+Math.random()*.2,c=.8+Math.random()*.3,fx=x+(L[0]+Math.cos(a)*1.2*r)*s,fz=z+(L[2]+Math.sin(a)*1.2*r)*s;
+   putE(fr,i*FCn+k,fx,cy+(L[1]-.75*r)*s,fz,s,s,s,0,0,0);fr.setColorAt(i*FCn+k,new THREE.Color(c,c,c))}})}
+
+function build(){
+ R=new THREE.WebGLRenderer({canvas:$('#jc'),antialias:true});R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.18;R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;
+ sc=new THREE.Scene();sky=new THREE.Mesh(new THREE.SphereGeometry(250,48,24),SKYM);sky.renderOrder=-1;sc.add(sky);cam=new THREE.PerspectiveCamera(45,1,.1,300);
+ const ec=document.createElement('canvas');ec.width=256;ec.height=128;const e=ec.getContext('2d'),q=e.createLinearGradient(0,0,0,128);q.addColorStop(0,'#a9bfd8');q.addColorStop(.5,'#efe6da');q.addColorStop(1,'#4a4440');e.fillStyle=q;e.fillRect(0,0,256,128);e.fillStyle='#fff';e.fillRect(30,14,60,24);e.fillRect(160,8,70,20);
+ const et=new THREE.CanvasTexture(ec);et.mapping=THREE.EquirectangularReflectionMapping;et.encoding=THREE.sRGBEncoding;sc.environment=new THREE.PMREMGenerator(R).fromEquirectangular(et).texture;
+ hemi=new THREE.HemisphereLight(0xffffff,0x445533,.85);sun=new THREE.DirectionalLight(0xffffff,2.2);sun.castShadow=true;sun.shadow.mapSize.set(1536,1536);const s2=sun.shadow.camera;s2.left=s2.bottom=-32;s2.right=s2.top=32;s2.far=140;sun.shadow.bias=-.0006;
+ pl1=new THREE.PointLight(0xffffff,0,50);pl2=new THREE.PointLight(0xffffff,0,50);sc.add(hemi,sun,sun.target,pl1,pl2);
+
+/* Chapter 0: Orchard Harvest & Field Loading Crew */
+ {const g=new THREE.Group();G[0]=g;sc.add(g);
+  const tg=new THREE.PlaneGeometry(240,320,100,130);tg.rotateX(-Math.PI/2);const tp=tg.attributes.position,tc=[];for(let i=0;i<tp.count;i++){const x=tp.getX(i),z=tp.getZ(i)-70;tp.setY(i,H(x,z));const n=.85+.2*Math.sin(x*.21)*Math.cos(z*.17)+.08*Math.sin(x*.9+z*.7);const pa=Math.max(0,1-Math.abs(x)/1.8);tc.push(n*(.95+pa*.6),n*(1-pa*.2),n*(.85-pa*.4))}
+  tg.setAttribute('color',new THREE.Float32BufferAttribute(tc,3));tg.computeVertexNormals();const gt=gT.clone();gt.needsUpdate=true;gt.repeat.set(70,90);const ter=new THREE.Mesh(tg,new THREE.MeshStandardMaterial({map:gt,vertexColors:true,roughness:1}));ter.position.z=-70;ter.receiveShadow=true;g.add(ter);
+  [[-70,-125,80,18],[45,-140,95,24],[-130,-160,90,22],[135,-150,80,20],[0,-185,150,34]].forEach((h,i)=>{const m=mesh(new THREE.SphereGeometry(1,24,12),mat(new THREE.Color().setHSL(.27,.28,.34+i*.015),0,1),h[0],-3,h[1],g);m.scale.set(h[2],h[3],h[2]*.55);m.castShadow=false});
+  const fm=fmat(),pts=[];[-3.8,-8.6,-13.4,3.8,8.6,13.4].forEach(x=>{for(let j=0;j<22;j++){const z=14-j*5.2+(Math.random()-.5)*.8,xx=x+(Math.random()-.5)*.5;if((Math.abs(z+8)<3.6||Math.abs(z+34)<3.6)&&Math.abs(xx)<6)continue;pts.push([xx,z,.85+Math.random()*.35,H(xx,z)])}});treeSet(g,pts,fm);
+  const gm=inst(new THREE.PlaneGeometry(.9,.7),GRM,GN,g);gm.castShadow=false;
+  for(let i=0;i<GN;i++){const x=(Math.random()-.5)*36,z=14-Math.random()*130,s=.6+Math.random()*.7;putE(gm,i,x,H(x,z)+.3*s,z,s,s,s,0,Math.random()*TAU,0)}
+  
+  // Farm loading truck & crates
+  const cr=inst(B(1.1,.55,.8),new THREE.MeshStandardMaterial({map:crateT,roughness:.9}),26,g),cf=inst(frG,fm,160,g);
+  for(let i=0;i<20;i++)putE(cr,i,(i%2?1.8:-1.8),H(1.8,-24)+.28+Math.floor(i/10)*.56,-22-(i%10)*.95,1,1,1,0,0,0);
+  for(let i=0;i<140;i++){const c=.8+Math.random()*.3,k=i%20;putE(cf,i,(k%2?1.8:-1.8)+(Math.random()-.5)*.7,H(1.8,-24)+.9+Math.random()*.15,-22-(k%10)*.95+(Math.random()-.5)*.3,1,1,1,0,0,0);cf.setColorAt(i,new THREE.Color(c,c,c))}
+  
+  // Field loading pickup vehicle in the orchard
+  const farmTruck=new THREE.Group();farmTruck.position.set(0,H(0,-20),-20);g.add(farmTruck);
+  mesh(B(2.2,.6,4.5),mat(0x284b63,.3,.6),0,.7,0,farmTruck);
+  mesh(B(2.1,1.4,1.8),mat(0x284b63,.3,.6),0,1.6,1.1,farmTruck);
+  mesh(B(1.9,.8,1.4),mat(0x10151a,.8,.1),0,1.75,1.25,farmTruck);
+  mesh(B(2.05,.8,2.4),mat(0x353a40,.2,.8),0,1.1,-.9,farmTruck);
+  // Wheels for pickup
+  [[-1.1,-1.1],[-1.1,1.3],[1.1,-1.1],[1.1,1.3]].forEach(p=>{const w=mesh(Cy(.4,.4,.28,16),mat(0x151515,0,.9),p[0],.4,p[1],farmTruck);w.rotation.z=Math.PI/2});
+
+  // Animated Orchard Workers (Picker, Carrier, Loader)
+  const w1=createWorker(g,0xd97706,0x1f2937,0xfbbf24); // Picker by tree
+  w1.group.position.set(-3.2,H(-3.2,-14),-14);w1.group.rotation.y=.6;
+  const w2=createWorker(g,0x2563eb,0x374151,0xe5e7eb); // Carrier with crate
+  w2.group.position.set(1.4,H(1.4,-18),-18);
+  const carriedCrate=mesh(B(.8,.4,.6),new THREE.MeshStandardMaterial({map:crateT,roughness:.9}),0,1.05,.45,w2.group);
+  const w3=createWorker(g,0x059669,0x111827,0xd97706); // Loader on pickup bed
+  w3.group.position.set(0,H(0,-20)+.8,-21.2);w3.group.rotation.y=Math.PI;
+
+  [-8,-34].forEach(zz=>{
+   const yArch=H(0,zz);
+   [-3.9,3.9].forEach(x=>{
+    mesh(B(.45,5.6,.45),mat(0x4a321e,0,.92),x,yArch+2.8,zz,g);
+    mesh(B(.55,.45,.55),mat(0x7c5a38,0,.9),x,yArch+.25,zz,g);
+    mesh(B(.12,.12,1.2),mat(0x1a1a1a,.8,.3),x,yArch+3.6,zz+.5,g);
+    mesh(Cy(.14,.18,.35,8),mat(0x1a1a1a,.8,.3),x,yArch+3.3,zz+1,g);
+    mesh(Cy(.1,.12,.22,8),new THREE.MeshBasicMaterial({color:0xffd175}),x,yArch+3.3,zz+1,g);
+   });
+   mesh(B(8.4,.5,.45),mat(0x4a321e,0,.92),0,yArch+5.2,zz,g);
+   const roof=mesh(new THREE.ConeGeometry(4.8,.8,4),mat(0x2d1e13,0,.95),0,yArch+5.8,zz,g);
+   roof.rotation.y=Math.PI/4;roof.scale.set(1.15,.6,.25);
+   const oSignM=new THREE.MeshStandardMaterial({map:orchardArchTex(),roughness:.75,metalness:.05});
+   mesh(new THREE.PlaneGeometry(7.6,2.3),oSignM,0,yArch+4.2,zz+.24,g);
+   const oSignBack=mesh(new THREE.PlaneGeometry(7.6,2.3),oSignM,0,yArch+4.2,zz-.24,g);
+   oSignBack.rotation.y=Math.PI;
+  });
+  for(let j=0;j<9;j++)[-1,1].forEach(sd=>{const z=6-j*5.5,x=sd*1.9,y=H(x,z);mesh(B(.08,1.6,.08),mat(0x6b4a2a,0,.9),x,y+.8,z,g);sign(g,1.3,.85,x,y+1.45,z+.06,0,'#1b130c','#fff8ec')});
+  const fw=inst(new THREE.SphereGeometry(.06,6,6),mat(0xffffff,0,.6),700,g);fw.castShadow=false;for(let i=0;i<700;i++){const x=(Math.random()-.5)*22,z=12-Math.random()*60,cc=[0xffffff,0xffe14d,0xff8fb1,0xc9a3ff][i%4];putE(fw,i,x,H(x,z)+.34+Math.random()*.2,z,1,1,1,0,0,0);fw.setColorAt(i,new THREE.Color(cc))}
+  const dp=dust(g,260,24,7,60,0xffe2a8);dp.position.z=-14;
+  UP[0]=(u,dt)=>{
+   dp.rotation.y+=dt*.02;
+   // Animate picker arm reaching for branches
+   w1.rArm.rotation.x=-1.2+Math.sin(u*4)*.35;w1.lArm.rotation.x=-.8+Math.cos(u*4)*.25;
+   // Animate carrier walking towards truck
+   const walkT=u*5;
+   w2.group.position.z=-18-Math.sin(u*.8)*2.2;
+   w2.lLeg.rotation.x=Math.sin(walkT)*.5;w2.rLeg.rotation.x=-Math.sin(walkT)*.5;
+   w2.lArm.rotation.x=-.8+Math.cos(walkT)*.15;w2.rArm.rotation.x=-.8-Math.cos(walkT)*.15;
+   // Animate loader stacking
+   w3.rArm.rotation.x=-.5+Math.sin(u*3)*.4;w3.lArm.rotation.x=-.5+Math.sin(u*3)*.4;
+  };
+  CM[0]=u=>{const z=10-u*4.2,x=Math.sin(u*.5)*.5;cam.position.set(x,H(x,z)+1.75+.2*Math.sin(u*.7),z);cam.lookAt(x*.4,H(x,z-9)+2.3,z-9)}}
+
+/* Chapter 1: Highway Transit */
+ {const g=new THREE.Group();g.position.x=600;G[1]=g;sc.add(g);
+  const rd=mesh(new THREE.PlaneGeometry(700,10),mat(0x2b2b2e,0,.9),0,.02,0,g);rd.rotation.x=-Math.PI/2;rd.castShadow=false;
+  [-1,1].forEach(s=>{const m=mesh(new THREE.PlaneGeometry(700,120),gmat(140,24),0,0,s*65,g);m.rotation.x=-Math.PI/2;m.castShadow=false});
+  const dh=inst(B(2.4,.03,.18),mat(0xf2efe6,0,.8),40,g),tgA=new THREE.Group(),tgB=new THREE.Group();g.add(tgA,tgB);[tgA,tgB].forEach(T_=>{const pp=[];for(let i=0;i<20;i++)[-1,1].forEach(q=>pp.push([-120+i*12+Math.random()*4,q*(9+Math.random()*12),.9+Math.random()*.4,0]));treeSet(T_,pp,null)});
+  const hl=[];for(let i=0;i<3;i++){const h=mesh(new THREE.SphereGeometry(1,14,10),mat(0x6f8fa8,0,1),-90+i*90,-.2,-70,g);h.scale.set(60,22+i*5,30);h.castShadow=false}
+  createHighwayBillboard(22,6.4,bbTex1(F[sel].c),30,9.5,-20,.05,tgA);
+  createHighwayBillboard(22,6.4,bbTex2(),110,9.5,-20,-.04,tgB);
+  const wh=[];
+  const {tk}=buildRealisticTruck(g,wh);
+  UP[1]=(u,dt)=>{
+   wh.forEach(w=>{w.rotation.z-=dt*29.09});
+   tk.position.y=.025*Math.sin(u*16)+.012*Math.sin(u*31);
+   tk.rotation.z=.003*Math.sin(u*12);
+   tk.rotation.x=.002*Math.sin(u*17);
+   const v=u*16;
+   for(let i=0;i<40;i++)put(dh,i,((i*6-v)%240+360)%240-120,.05,0);
+   tgA.position.x=-(v%240);tgB.position.x=tgA.position.x+240;
+   dh.instanceMatrix.needsUpdate=true};
+  CM[1]=u=>{const a=-.75+u*.17;cam.position.set(Math.sin(a)*12.5+600,2.2+.5*Math.sin(u*.4),Math.cos(a)*12.5);cam.lookAt(600,1.9,0)}}
+
+/* Chapter 2: Cold-Press Facility */
+ {const g=new THREE.Group();g.position.x=1200;G[2]=g;sc.add(g);
+  // Sanitary Industrial Factory Hall & Overhead Trusses
+  const st=mat(0xe2e6eb,1,.18),darkPanels=mat(0x1c1f26,.5,.6),epoxyFloor=mat(0x151820,.3,.15),safetyYellow=mat(0xf59e0b,0,.6),pipeChrome=mat(0xeff1f5,1,.12);
+  const fl=mesh(new THREE.PlaneGeometry(60,40),epoxyFloor,0,0,0,g);fl.rotation.x=-Math.PI/2;
+  // Floor Safety Walkway Lines & Drain Grates
+  [-6,6].forEach(z=>mesh(B(40,.01,.15),safetyYellow,0,.005,z,g));
+  mesh(B(30,.01,1.2),mat(0x101216,.7,.4),0,.004,0,g);
+  
+  // Factory Walls & SIPITO Industrial Signage
+  mesh(B(60,16,1),mat(0xd6dbe2,0,.8),0,8,-20,g);
+  mesh(B(1,16,40),mat(0xd6dbe2,0,.8),-30,8,0,g);
+  mesh(B(1,16,40),mat(0xd6dbe2,0,.8),30,8,0,g);
+  sign(g,18,5.2,0,9.5,-19.45,0,'#121016','#f6f2ec');
+  
+  // Overhead Steel Trusses & High-Bay Industrial LED Strips
+  for(let x=-20;x<=20;x+=10){
+   mesh(B(.4,.6,40),darkPanels,x,15.2,0,g);
+   const truss=mesh(B(.15,1.2,39.6),darkPanels,x,14.6,0,g);
+  }
+  for(let i=0;i<6;i++){
+   const l=mesh(B(6,.18,.7),new THREE.MeshBasicMaterial({color:0xffffff}),-15+i*6,14,-2,g);l.castShadow=false;
+   const spotLight=new THREE.PointLight(0xffffff,1.6,18);spotLight.position.set(-15+i*6,13.5,-2);g.add(spotLight);
+  }
+
+  // Overhead Process Piping & Chilled Ducting
+  [-16,-14].forEach(y=>{
+   const duct=mesh(Cy(.6,.6,58,16),st,0,13.2,y,g);duct.rotation.z=Math.PI/2;
+   const duct2=mesh(Cy(.25,.25,58,16),pipeChrome,0,12.2,y+.8,g);duct2.rotation.z=Math.PI/2;
+  });
+  
+  // Incline Fruit Conveyor feeding hydraulic press
+  mesh(B(14,.85,1.6),darkPanels,0,.45,0,g);
+  mesh(B(14,.05,1.35),mat(0x0e1013,0,.9),0,.95,0,g);
+  [-0.75,0.75].forEach(z=>mesh(B(14,.2,.08),st,0,1.05,z,g));
+  const fr=inst(new THREE.SphereGeometry(.22,14,14),fmat(),40,g);
+
+  // Massive Dual-Piston Hydraulic Cold-Press Station
+  const pressBase=mesh(B(3.8,4.6,3.8),st,8.4,2.3,0,g);
+  mesh(B(3.9,.45,3.9),darkPanels,8.4,4.6,0,g);
+  mesh(B(3.9,.5,3.9),darkPanels,8.4,.25,0,g);
+  sign(g,2.8,1.2,8.4,2.3,1.92,0,'#c8ced6','#121016');
+  sign(g,8.5,.85,-2,.45,.82,0,'#272a30','#f6f2ec');
+  
+  // Hydraulic Rams & Pressure Gauge Indicators
+  const pis1=mesh(Cy(.85,.85,2.6,24),pipeChrome,7.7,4.6,0,g),pis2=mesh(Cy(.85,.85,2.6,24),pipeChrome,9.1,4.6,0,g);
+  mesh(Cy(.2,.2,.08,16),new THREE.MeshBasicMaterial({color:0x10b981}),8.4,3.4,1.92,g).rotation.x=Math.PI/2;
+  mesh(Cy(.1,.1,.09,16),new THREE.MeshBasicMaterial({color:0xef4444}),8.4,4.0,1.92,g).rotation.x=Math.PI/2;
+
+  // Twin Stainless Holding Silos with Chilled Glycol Jackets
+  mesh(Cy(1.6,1.6,7.5,32),st,14,3.75,-3.5,g);
+  mesh(Cy(1.6,1.6,7.5,32),st,14,3.75,3.5,g);
+  mesh(B(1.2,.4,.08),darkPanels,14,3.2,1.88,g);
+  
+  // Peristaltic Juice Piping & Borosilicate Glass Tower
+  const pipeMain=mesh(Cy(.16,.16,3.2,16),pipeChrome,10,.8,1.6,g);pipeMain.rotation.x=Math.PI/2;
+  const gl=mesh(Cy(.9,.9,2.2,32),new THREE.MeshPhysicalMaterial({color:0xffffff,transparent:true,opacity:.25,roughness:.02,metalness:0}),10,1.1,3.2,g);gl.castShadow=false;
+  const jm=new THREE.MeshPhysicalMaterial({color:0xffffff,emissive:0xffffff,emissiveIntensity:.42,roughness:.05,clearcoat:1});FM.push(jm);
+  const lv=mesh(Cy(.84,.84,1.3,32),jm,10,.35,3.2,g),sm=mesh(Cy(.08,.08,1.3,10),jm,10,1.3,3.2,g);
+
+  // Digital HMI Control Console Pedestal
+  const hmi=mesh(B(.8,1.2,.5),darkPanels,5.2,.6,2.4,g);hmi.rotation.y=-.4;
+  const screen=mesh(B(.6,.4,.04),new THREE.MeshBasicMaterial({color:0x38bdf8}),5.2,1.25,2.4,g);screen.rotation.y=-.4;screen.rotation.x=-.3;
+
+  // 3 Animated Sanitary Factory Workers (Lab coats, Hairnets, Boots)
+  // Worker 1: HMI Console Operator
+  const fw1=createWorker(g,0xf8fafc,0x1e293b,0x38bdf8);
+  fw1.group.position.set(5.5,0,3.3);fw1.group.rotation.y=Math.PI-.4;
+  
+  // Worker 2: Quality Inspection at Conveyor Intake
+  const fw2=createWorker(g,0xf8fafc,0x1e293b,0x38bdf8);
+  fw2.group.position.set(-1.2,0,1.4);fw2.group.rotation.y=0;
+  
+  // Worker 3: Walking Technician with Sample Canister
+  const fw3=createWorker(g,0xf8fafc,0x1e293b,0x38bdf8);
+  fw3.group.position.set(2.0,0,-2.5);
+  const sampleCan=mesh(Cy(.14,.14,.35,16),pipeChrome,0,.95,.35,fw3.group);
+  
+  UP[2]=(u,dt)=>{
+   for(let i=0;i<40;i++){const x=((i*.7+u*1.7)%14)-7;put(fr,i,x,1.2,((i%3)-1)*.34,x>5.9?.001:1,x>5.9?.001:1,x>5.9?.001:1)}
+   fr.instanceMatrix.needsUpdate=true;
+   const pressCycle=Math.sin(u*4.5);
+   pis1.position.y=4.0+.55*pressCycle;pis2.position.y=4.0+.55*pressCycle;
+   const h=.2+1.0*(.5+.5*Math.sin(u*1.8));lv.scale.y=h;lv.position.y=.01+h/2;
+   sm.scale.y=1.2-h*.5;sm.position.y=.6+h*.5;
+
+   // Worker 1: Operating digital touch console
+   fw1.rArm.rotation.x=-.9+Math.sin(u*5)*.15;fw1.lArm.rotation.x=-.7+Math.cos(u*3)*.1;
+   // Worker 2: Inspecting intake
+   fw2.rArm.rotation.x=-.6+Math.sin(u*2)*.2;fw2.lArm.rotation.x=-.6-Math.sin(u*2)*.2;
+   // Worker 3: Walking with sample
+   const w3T=u*4.5;
+   fw3.group.position.x=2.0+Math.sin(u*.7)*2.5;
+   fw3.group.rotation.y=Math.cos(u*.7)>0?Math.PI/2:-Math.PI/2;
+   fw3.lLeg.rotation.x=Math.sin(w3T)*.45;fw3.rLeg.rotation.x=-Math.sin(w3T)*.45;
+   fw3.lArm.rotation.x=-.7+Math.cos(w3T)*.12;fw3.rArm.rotation.x=-.7-Math.cos(w3T)*.12;
+  };
+
+  // Cinematic Drone-to-Human Eye Level Camera Swoop
+  CM[2]=u=>{
+   const swoop=Math.max(0,1-u/3.2);
+   const easeSwoop=Math.pow(swoop,2.4);
+   const camX=1200+1+u*.5-easeSwoop*4.8;
+   const camY=2.3+easeSwoop*7.4;
+   const camZ=6.8+easeSwoop*8.4;
+   cam.position.set(camX,camY,camZ);
+   cam.lookAt(1200+6,1.6+easeSwoop*1.8,.6);
+  }}
+
+/* Chapter 3: Multi-Lane Convertible Automated Canning Line */
+ {const g=new THREE.Group();g.position.x=1800;G[3]=g;sc.add(g);
+  const st=mat(0xc9ced4,1,.22),darkTrack=mat(0x1a1d22,.5,.6),epoxy=mat(0x16181e,.3,.2);
+  const fl=mesh(new THREE.PlaneGeometry(60,40),epoxy,0,0,0,g);fl.rotation.x=-Math.PI/2;
+  mesh(B(60,14,1),mat(0xd0d5dc,0,.8),0,7,-20,g);mesh(B(1,14,40),mat(0xd0d5dc,0,.8),-30,7,0,g);mesh(B(1,14,40),mat(0xd0d5dc,0,.8),30,7,0,g);
+  sign(g,16,5,0,8,-19.45,0,'#14110f','#f4efe8');
+
+  // Multi-Lane Convertible Conveyor System (3 Parallel Stainless Lanes for Multi-Flavor Bottling)
+  const lanes=[-1.1, 0, 1.1];
+  const canMeshes=[];
+  lanes.forEach((lz, laneIdx)=>{
+   // Conveyor bed & side guide rails
+   mesh(B(28,.9,1.0),darkTrack,0,.45,lz,g);
+   mesh(B(28,.05,.85),mat(0x0a0a0c,0,.9),0,.93,lz,g);
+   [-.46,.46].forEach(rz=>mesh(B(28,.14,.04),st,0,1.05,lz+rz,g));
+   // Printed Cans matching actual flavours
+   const fIdx=(sel+laneIdx)%F.length;
+   const flLabelTex=canPrintLabelTex(F[fIdx].n,F[fIdx].c);
+   const laneCanMat=new THREE.MeshPhysicalMaterial({map:flLabelTex,metalness:.4,roughness:.32,clearcoat:.7});
+   const cnInst=inst(Cy(.34,.34,1.1,28),laneCanMat,26,g);
+   canMeshes.push({cnInst,laneIdx,z:lz});
+  });
+
+  // Automated Multi-Head Rotary Filling & Nitrogen Seaming Station
+  [-1.8,1.8].forEach(z=>{mesh(B(.24,3.2,.24),st,0,2.4,z,g);mesh(B(.24,3.2,.24),st,2.8,2.4,z,g)});
+  mesh(B(.35,.35,3.8),st,0,3.9,0,g);mesh(B(.35,.35,3.8),st,2.8,3.9,0,g);
+
+  // Triple Filling Nozzles (one per conveyor lane)
+  const jm=new THREE.MeshPhysicalMaterial({color:0xffffff,emissive:0xffffff,emissiveIntensity:.38,roughness:.05,clearcoat:1});FM.push(jm);
+  const nozzles=[],streams=[];
+  lanes.forEach(lz=>{
+   const nz=mesh(Cy(.1,.1,.55,12),st,0,3.35,lz,g);
+   const sr=mesh(Cy(.04,.04,1,8),jm,0,2.4,lz,g);
+   nozzles.push(nz);streams.push(sr);
+  });
+  // Rotary Lid Seamer Head
+  const seamer=mesh(Cy(.6,.6,.3,24),st,2.8,3.1,0,g);
+
+  UP[3]=(u,dt)=>{
+   canMeshes.forEach(cm=>{
+    for(let i=0;i<26;i++){
+     const speed=1.2+cm.laneIdx*.25;
+     const x=((i+u*speed)%26)-13;
+     put(cm.cnInst,i,x,1.48,cm.z);
+    }
+    cm.cnInst.instanceMatrix.needsUpdate=true;
+   });
+   // Animate juice stream injection
+   const fillPulse=Math.sin(u*7)>0;
+   streams.forEach(sr=>{sr.visible=fillPulse;sr.scale.x=sr.scale.z=.7+.3*Math.sin(u*20)});
+   seamer.position.y=2.8+.22*Math.max(0,Math.sin(u*6));
+   seamer.rotation.y+=dt*15;
+  };
+  CM[3]=u=>{const a=.55+u*.13;cam.position.set(1800+Math.sin(a)*8.2,2.7+.3*Math.sin(u*.6),Math.cos(a)*8.2);cam.lookAt(1800+1.2,1.6,0)}}
+
+/* Chapter 4: Chilled Storage Warehouse & Forklift Logistics */
+ {const g=new THREE.Group();g.position.x=2400;G[4]=g;sc.add(g);
+  const fl=mesh(new THREE.PlaneGeometry(60,120),mat(0x6d7880,.3,.18),0,0,-30,g);fl.rotation.x=-Math.PI/2;fl.castShadow=false;
+  mesh(B(60,.5,120),mat(0x9aa7b0,0,.9),0,14,-30,g);mesh(B(60,14,1),mat(0xcfd8de,0,.8),0,7,-90,g);
+  
+  // Heavy Structural Pallet Racking
+  const sm=mat(0x2b6cb0,.4,.5),or=mat(0xe0742a,.3,.5),up=inst(B(.15,6,.15),sm,120,g),bm=inst(B(3.8,.15,.15),or,160,g);
+  const cn=inst(Cy(.17,.17,.5,12),canMat(),2700,g);let a=0,b=0,c=0;
+  for(const s of[-1,1])for(let j=0;j<15;j++){const z=4-j*4.2;[0,3.9].forEach(dz=>{[0,1].forEach(dx=>{if(a<120)put(up,a++,s*(4+dx*2.3)+(dx?s*.1:0),3,z-dz*.5+0)})});
+   for(let l=0;l<3;l++){const y=1.2+l*1.8;if(b<160)put(bm,b++,s*5.2,y,z-1.9,.001+1,1,1);for(let ix=0;ix<6;ix++)for(let iz=0;iz<5;iz++){if(c<2700)put(cn,c++,s*(4.4+ix*.38*s*0+ (ix%3)*.4*s),y+.33+.0+Math.floor(ix/3)*.52,z-.45-iz*.42)}}}
+  up.instanceMatrix.needsUpdate=bm.instanceMatrix.needsUpdate=cn.instanceMatrix.needsUpdate=true;
+
+  for(let i=0;i<8;i++){const l=mesh(B(.4,.12,12),new THREE.MeshBasicMaterial({color:0xd8f0ff}),0,13.5,-i*14,g);l.castShadow=false}
+  const ms=dust(g,420,16,10,110,0xcfe9ff);ms.position.z=-45;ms.material.size=.2;ms.material.opacity=.3;
+  sign(g,14,5,0,8,-88.6,0,'#0c1a26','#fff');sign(g,8,2.4,0,10.5,-17.97,0,'#0c1a26','#fff');sign(g,8,2.4,0,10.5,-18.03,Math.PI,'#0c1a26','#fff');
+  
+  // Industrial Forklift with animated travel
+  const fk=new THREE.Group();g.add(fk);mesh(B(1.6,1.2,2.2),mat(0xe6b800,.3,.5),0,.9,0,fk);mesh(B(.15,3.6,.15),mat(0x222,.5,.5),.4,2.1,1.3,fk);mesh(B(.15,3.6,.15),mat(0x222,.5,.5),-.4,2.1,1.3,fk);mesh(B(.12,.1,1.6),mat(0xb0b6bc,1,.3),.4,.4,2,fk);mesh(B(.12,.1,1.6),mat(0xb0b6bc,1,.3),-.4,.4,2,fk);
+  // Headlights for forklift
+  const fkLight=new THREE.PointLight(0xfffae0,1.8,14);fkLight.position.set(0,1.5,1.5);fk.add(fkLight);
+
+  UP[4]=(u,dt)=>{ms.position.y+=0;ms.rotation.y+=dt*.01;fk.position.set(1.8,0,-8-u*3.2);const ar=ms.geometry.attributes.position;for(let i=0;i<ar.count;i++){let y=ar.getY(i)+dt*.12;if(y>10)y=0;ar.setY(i,y)}ar.needsUpdate=true};
+  CM[4]=u=>{const z=6-u*4.6;cam.position.set(2400,2.3+.2*Math.sin(u*.8),z);cam.lookAt(2400,2.2,z-10)}}
+
+ const dt=$('#jdots');CH.forEach((c,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Chapter '+(i+1)+': '+c[0]);b.innerHTML='<i></i>';b.onclick=()=>{T=i*DUR;if(!play)tick(0)};dt.append(b);dots.push(b.firstChild)});
+ built=true}
+
+function rs(){if(!R)return;const W=innerWidth,H=innerHeight;R.setPixelRatio(Math.min(devicePixelRatio,innerWidth<850?1.4:2));R.setSize(W,H,false);cam.aspect=W/H;cam.fov=W/H<1?62:45;cam.updateProjectionMatrix()}
+function setScene(i){cur=i;G.forEach((g,k)=>g.visible=k===i);const c=CF[i],ox=i*600;sc.background=new THREE.Color(c.bg);sky.visible=i<2;if(i<2){SKYM.uniforms.uMode.value=i;}sc.fog=new THREE.FogExp2(c.bg,c.f);hemi.intensity=c.h;sun.color.set(c.s);sun.intensity=c.si;
+ pl1.intensity=pl2.intensity=c.pl;pl1.position.set(ox+4,9,4);pl2.position.set(ox+10,9,-4);if(i===4){pl1.position.set(ox,9,-6);pl2.position.set(ox,9,-30)}
+ $('#jsun').style.opacity=i<2?1:0;$('#jn').textContent='0'+(i+1);$('#jt').textContent=CH[i][0];$('#jd').textContent=CH[i][1];const cp=$('#jcap');cp.classList.remove('pp');void cp.offsetWidth;cp.classList.add('pp');
+ dots.forEach((d,k)=>d.style.width=k<i?'100%':'0')}
+function tick(dt){const total=CH.length*DUR;if(play)T+=dt;const tt=T%total,i=Math.floor(tt/DUR),u=tt-i*DUR;if(i!==cur)setScene(i);
+ const cc=col();FM.forEach(m=>{m.color.copy(cc);if(m.emissive)m.emissive.copy(cc)});
+ UP[i](u,dt);CM[i](u);sky.position.copy(cam.position);WU.value+=dt;SKYM.uniforms.uT.value+=dt;const tx=cam.position.x+0,tz=cam.position.z-6;sun.target.position.set(tx,0,tz);sun.position.set(tx+CF[i].sp[0],CF[i].sp[1],tz+CF[i].sp[2]);
+ $('#jfade').style.opacity=Math.max(1-u/.8,(u-(DUR-.8))/.8,0);dots[i].style.width=(u/DUR*100)+'%';R.render(sc,cam)}
+function loop(now){if(!on)return;requestAnimationFrame(loop);const dt=Math.min((now-last)/1000,.05);last=now;tick(dt)}
+let lastTrig=null;function open(){lastTrig=document.activeElement;if(!built){try{build()}catch(err){console.warn(err);toast('Could not start 3D journey: '+(err.message||err));return}}rs();play=true;$('#jp').textContent='❚❚';$('#jp').setAttribute('aria-label','Pause');jr.classList.add('on');document.body.style.overflow='hidden';on=true;T=0;cur=-1;last=performance.now();try{if(location.hash!=='#journey')history.replaceState(null,'','#journey')}catch(e){}requestAnimationFrame(loop);$('#jx').focus()}
+function close(){on=false;jr.classList.remove('on');document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}if(lastTrig&&lastTrig.focus)lastTrig.focus()}
+addEventListener('resize',rs);addEventListener('keydown',e=>{if(!on)return;const ci=()=>Math.floor((T%(CH.length*DUR))/DUR);
+ if(e.key==='Escape')close();
+ else if(e.key==='ArrowRight'){T=(ci()+1)%CH.length*DUR;if(!play)tick(0)}
+ else if(e.key==='ArrowLeft'){T=(ci()+CH.length-1)%CH.length*DUR;if(!play)tick(0)}
+ else if(e.key===' '&&document.activeElement.tagName!=='BUTTON'){e.preventDefault();$('#jp').click()}});
+$('#jtk').innerHTML=('<i>SIPITO</i><b>●</b>FRESH CUT. PURE FRUIT.<b>●</b>').repeat(18);$('#jx').onclick=close;$('#jp').onclick=()=>{play=!play;$('#jp').textContent=play?'❚❚':'▶';$('#jp').setAttribute('aria-label',play?'Pause':'Play')};
+document.querySelectorAll('a[href="#journey"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();open()}));
+if(location.hash==='#journey'){if(document.readyState==='complete'||document.readyState==='interactive')setTimeout(open,100);else addEventListener('load',open);}
+})();
+</script>
+</body></html>
